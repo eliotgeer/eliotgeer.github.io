@@ -85,3 +85,7 @@ canonifyurls = true
 [outputs]
   home = ['HTML', 'RSS']
   pages = ['HTML']
+
+[caches]
+  [caches.images]
+    dir = ':cacheDir/images'
