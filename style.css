@@ -17,5 +17,12 @@ body {
 
 .page {
     display: grid;
-    grid-template-columns: clamp(200px, 30vw, 400px) 3fr;
+    /* grid-template-columns: clamp(200px, 30vw, 400px) 3fr; */
+    grid-template-columns: 32px 1fr;
+}
+
+.Guy {
+    position: fixed;
+    top: 8;
+    left: 8;
 }
