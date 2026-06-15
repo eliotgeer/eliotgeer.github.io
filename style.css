@@ -17,11 +17,15 @@ body {
 
 .page {
     display: grid;
-    grid-template-columns: 128px 1fr;
+    grid-template-columns: 64px 1fr;
 }
 
 .Guy {
     position: fixed;
-    top: 32;
-    left: 32;
+    top: 16;
+    left: 16;
+}
+
+.scrollbar {
+    background-color: bisque;
 }
