@@ -12,6 +12,7 @@ body {
 .big {
     font-family: BigFont;
     background-color: aquamarine;
+    font-size: 50px;
 }
 
 /* .scroll-watcher {
