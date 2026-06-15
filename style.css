@@ -2,12 +2,16 @@ body {
   margin: 0;
   background: pink;
   text-align: center;
-  font-family:'Courier New', Courier, monospace;
 }
 
 @font-face {
   font-family: BigFont;
   src: url(assets/BigFont.ttf);
+}
+
+.big {
+    font-family: BigFont;
+    background-color: aquamarine;
 }
 
 /* .scroll-watcher {
