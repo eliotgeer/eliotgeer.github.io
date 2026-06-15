@@ -2,12 +2,12 @@ body {
   margin: 0;
   background: pink;
   text-align: center;
-  font-family: "BigFont";
+  font-family: BigFont;
 }
 
 @font-face {
-  font-family: "BigFont";
-  src: url("assets/BigFont.ttf");
+  font-family: BigFont;
+  src: url(assets/BigFont.ttf);
 }
 
 /* .scroll-watcher {
