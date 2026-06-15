@@ -15,17 +15,7 @@ body {
   font-size: 1000%;
 }
 
-/* .scroll-watcher {
-    height: 10px;
-    position: fixed;
-    top: 0;
-    z-index: 1000;
-    background-color: lime;
-    scale: 0 1;
-    animation: scroll-watcher linear;
-    animation-timeline: scroll();
+.page {
+    display: grid;
+    grid-template-columns: 1fr 3fr;
 }
-
-@keyframes scroll-watcher {
-    to { scale: 1 1; }
-} */
