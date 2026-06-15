@@ -1,10 +1,16 @@
 body {
-    margin: 0;
-    background: pink;
-    text-align: center;
+  margin: 0;
+  background: pink;
+  text-align: center;
+  font-family: "BigFont";
 }
 
-.scroll-watcher {
+@font-face {
+  font-family: "BigFont";
+  src: "assets/BigFont.ttf";
+}
+
+/* .scroll-watcher {
     height: 10px;
     position: fixed;
     top: 0;
@@ -17,4 +23,4 @@ body {
 
 @keyframes scroll-watcher {
     to { scale: 1 1; }
-}
+} */
