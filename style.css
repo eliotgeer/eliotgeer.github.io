@@ -2,7 +2,7 @@ body {
   margin: 0;
   background: pink;
   text-align: center;
-  font-family: BigFont;
+  font-family:'Courier New', Courier, monospace;
 }
 
 @font-face {
