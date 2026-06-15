@@ -10,9 +10,13 @@ body {
 }
 
 .big {
-    font-family: BigFont;
-    background-color: aquamarine;
-    font-size: 200%;
+  font-family: BigFont;
+  background-color: aquamarine;
+  font-size: 100px;
+}
+
+p {
+  font-size: 100px;
 }
 
 /* .scroll-watcher {
