@@ -39,7 +39,7 @@ body {
   animation-timeline: scroll();
 }
 .Guy:hover {
-  src: "assets/Hover.gif";
+  left: 5px;
 }
 
 @keyframes move-down {
@@ -62,7 +62,6 @@ body {
 }
 
 .scrollbar {
-  /* background-color: #f4d29c; */
   background-image: url(assets/GuyPath.png);
   background-size: 128px;
   background-repeat: repeat-y;
