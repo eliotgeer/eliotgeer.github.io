@@ -29,9 +29,8 @@ body {
   grid-template-columns: 128px 1fr;
 }
 
-.Guy {
-  /* src: "assets/Guy.gif"; */
-  background: url(assets/Guy.gif);
+/* .Guy {
+  src: "assets/Guy.gif";
   position: fixed;
   top: 0%;
   left: 0px;
@@ -41,7 +40,31 @@ body {
 }
 .Guy:hover {
   left: 5px;
-  background: url(assets/Hover.gif);
+} */
+
+@keyframes hover-bounce {
+  0%, 100% { transform: translateY(0); }
+  30% { transform: translateY(-12px); }
+  50% { transform: translateY(0); }
+  70% { transform: translateY(-6px); }
+}
+.Guy {
+  src: "assets/Guy.gif";
+  position: fixed;
+  top: 0%;
+  left: 0px;
+  z-index: 2;
+  animation: move-down linear;
+  animation-timeline: scroll();
+  transition: box-shadow 0.6s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+.Guy:hover, .element:focus-visible {
+  box-shadow: 0 10px 15px rgba(0, 0, 0, 0.3);
+}
+@media (prefers-reduced-motion: no-preference) {
+  .element:hover, .element:focus-visible {
+    animation: hover-bounce 0.6s cubic-bezier(0.68, -0.55, 0.265, 1.55) 1;
+  }
 }
 
 @keyframes move-down {
