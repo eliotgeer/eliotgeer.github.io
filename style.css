@@ -43,10 +43,10 @@ body {
 } */
 
 @keyframes hover-bounce {
-  0%, 100% { transform: translateY(0); }
-  30% { transform: translateY(-12px); }
-  50% { transform: translateY(0); }
-  70% { transform: translateY(-6px); }
+  0%, 100% { transform: translateX(0); }
+  30% { transform: translateX(12px); }
+  50% { transform: translateX(0); }
+  70% { transform: translateX(6px); }
 }
 .Guy {
   src: "assets/Guy.gif";
