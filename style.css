@@ -33,12 +33,14 @@ p {
 .PageGrid {
   display: grid;
   grid-template-columns: 2fr 14fr;
+  height: 100%;
 }
 .MidGround {
   width: 100%;
   z-index: 10;
   position: fixed;
   bottom: 0;
+  left: 0;
 }
 
 /* SIDEBAR ELEMENTS */
@@ -90,7 +92,7 @@ img.Sun {
 }
 @keyframes scroll-slow {
   to {
-    top: 50%;
+    top: -25%;
   }
 }
 
