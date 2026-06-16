@@ -92,7 +92,7 @@ img.Sun {
 }
 @keyframes scroll-slow {
   to {
-    top: -25%;
+    top: -50%;
   }
 }
 
