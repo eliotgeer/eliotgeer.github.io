@@ -41,7 +41,7 @@ p {
   position: fixed;
   bottom: -100%;
   left: 0;
-  animation: up-down linear;
+  animation: up-down cubic-bezier(0.075, 0.82, 0.165, 1);
   animation-timeline: scroll();
 }
 @keyframes up-down {
@@ -49,6 +49,7 @@ p {
     bottom: 0%, -100%;
   } */
   50% { bottom: 0%; }
+  75% { bottom: 0%; }
   100% { bottom: -100%; }
 }
 
@@ -74,9 +75,10 @@ img.Guy {
   animation-timeline: scroll();
 }
 @keyframes move-down {
-  to {
+  /* to {
     top: 100%;
-  }
+  } */
+  50% { top: 100% }
 }
 
 /* FRONT PAGE ELEMENTS */
