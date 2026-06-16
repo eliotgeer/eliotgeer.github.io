@@ -37,6 +37,8 @@ p {
 .MidGround {
   width: 100%;
   z-index: 10;
+  position: fixed;
+  bottom: 0;
 }
 
 /* SIDEBAR ELEMENTS */
@@ -88,7 +90,7 @@ img.Sun {
 }
 @keyframes scroll-slow {
   to {
-    top: -100%;
+    top: 50%;
   }
 }
 
