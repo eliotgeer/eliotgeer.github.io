@@ -1,6 +1,6 @@
 body {
   margin: 0;
-  background: #14a02e;
+  background: #249fde;
   text-align: center;
   font-size: 100%;
 
@@ -46,7 +46,7 @@ p {
   left: 5px;
 } */
 
-.Guy {
+img.Guy {
   src: "assets/Guy.gif";
   position: fixed;
   top: 0%;
@@ -62,13 +62,13 @@ p {
   }
 }
 
-.fixedBottom {
+img.fixedBottom {
   position: fixed;
   bottom: 0px;
   left: 0px;
   z-index: 1;
 }
-.fixedTop {
+img.fixedTop {
   position: fixed;
   top: 0px;
   left: 0px;
@@ -84,4 +84,13 @@ p {
 .nine-box {
   border-image: url(assets/NineBox.png) 80 80 80 80 fill / 80px 80px 80px 80px;
   padding: 80px 80px 80px 80px;
+}
+
+img.FG {
+  width: 100vw;
+}
+img.Sun {
+  position: fixed;
+  top: 0;
+  width: 100vw;
 }
