@@ -3,6 +3,8 @@ body {
   background: #14a02e;
   text-align: center;
   font-size: 100%;
+
+  overflow: hidden;
 }
 
 @font-face {
@@ -15,8 +17,8 @@ body {
   font-size: 400%;
 }
 
-.blue-bg {
-    background-color: aquamarine;
+.tan-bg {
+    background-color: #f4d29c;
 }
 
 .page {
