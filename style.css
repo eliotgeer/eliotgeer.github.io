@@ -96,7 +96,7 @@ img.FG {
 img.Sun {
   position: fixed;
   top: 0;
-  left: 128px;
-  width: 100vw;
+  right: 0;
+  width: calc(100vw - 128px);
   z-index: -1;
 }
