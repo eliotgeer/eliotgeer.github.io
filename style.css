@@ -39,8 +39,15 @@ p {
   width: 100%;
   z-index: 10;
   position: fixed;
-  bottom: 0;
+  bottom: -100%;
   left: 0;
+  animation: up-down cubic-bezier(0.075, 0.82, 0.165, 1);
+  animation-timeline: scroll();
+}
+@keyframes up-down {
+  to {
+    bottom: 0%, -100%;
+  }
 }
 
 /* SIDEBAR ELEMENTS */
