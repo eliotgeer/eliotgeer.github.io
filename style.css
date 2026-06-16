@@ -41,13 +41,15 @@ p {
   position: fixed;
   bottom: -100%;
   left: 0;
-  animation: up-down cubic-bezier(0.075, 0.82, 0.165, 1);
+  animation: up-down linear;
   animation-timeline: scroll();
 }
 @keyframes up-down {
-  to {
+  /* to {
     bottom: 0%, -100%;
-  }
+  } */
+  50% { bottom: 0%; }
+  100% { bottom: -100%; }
 }
 
 /* SIDEBAR ELEMENTS */
