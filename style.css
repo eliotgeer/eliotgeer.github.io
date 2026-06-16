@@ -41,7 +41,7 @@ img.MidGround {
   position: fixed;
   bottom: -100%;
   left: 0;
-  animation: up-down cubic-bezier(0.075, 0.82, 0.165, 1);
+  animation: up-down ease-in-out;
   animation-timeline: scroll();
 }
 @keyframes up-down {
