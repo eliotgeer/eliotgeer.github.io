@@ -2,7 +2,7 @@ body {
   margin: 0;
   background: #14a02e;
   text-align: center;
-  font-size: large;
+  font-size: 500%;
 }
 
 @font-face {
@@ -21,16 +21,16 @@ body {
     grid-template-columns: 64px 1fr;
 }
 
-.Guy {
+.fixedTop {
     position: fixed;
-    top: 16px;
-    left: 16px;
+    top: 0px;
+    left: 0px;
 }
 
-.PathEnd {
+.fixedBottom {
     position: fixed;
     bottom: 0px;
-    left: 0px;
+    left: 0px
 }
 
 .scrollbar {
