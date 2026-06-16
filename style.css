@@ -35,7 +35,8 @@ p {
   grid-template-columns: 2fr 14fr;
 }
 .MidGround {
-
+  width: 100%;
+  z-index: 5;
 }
 
 /* SIDEBAR ELEMENTS */
@@ -48,6 +49,7 @@ p {
 img.Guy {
   src: "assets/Guy.gif";
   position: fixed;
+  width: 50%;
   top: 0%;
   left: 0px;
   z-index: 4;
@@ -56,7 +58,7 @@ img.Guy {
 }
 @keyframes move-down {
   to {
-    top: calc(100% - 64px);
+    top: 100%;
   }
 }
 
@@ -73,7 +75,7 @@ img.Sun {
   position: fixed;
   top: 0;
   right: 0;
-  width: 100%;
+  width: calc(100% - 2fr);
   z-index: -1;
   animation: scroll-slow linear;
   animation-timeline: scroll();
