@@ -2,7 +2,7 @@ body {
   margin: 0;
   background: #14a02e;
   text-align: center;
-  font-size: 500%;
+  font-size: 100%;
 }
 
 @font-face {
@@ -13,7 +13,7 @@ body {
 .big {
   font-family: BigFont;
   background-color: aquamarine;
-  font-size: 500%;
+  font-size: 300%;
 }
 
 .page {
