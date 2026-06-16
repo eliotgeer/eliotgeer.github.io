@@ -28,12 +28,13 @@ body {
     position: fixed;
     top: 0%;
     left: 0px;
+    z-index: 1;
     animation: move-down linear;
     animation-timeline: scroll();
 }
 
 @keyframes move-down {
-    to {top: 100%}
+    to {top: calc(100% - 64px)}
 }
 
 .fixedBottom {
