@@ -48,7 +48,7 @@ img.MidGround {
   /* to {
     bottom: 0%, -100%;
   } */
-  50% { bottom: 0%; }
+  50% { bottom: -100%; }
   75% { bottom: 0%; }
   100% { bottom: -100%; }
 }
