@@ -85,6 +85,7 @@ img.fixedTop {
 .nine-box {
   border-image: url(assets/NineBox.png) 80 80 80 80 fill / 80px 80px 80px 80px;
   padding: 80px 80px 80px 80px;
+  margin: 64px;
 }
 
 img.FG {
