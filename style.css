@@ -30,7 +30,8 @@ body {
 }
 
 .Guy {
-  src: "assets/Guy.gif";
+  /* src: "assets/Guy.gif"; */
+  background: url(assets/Guy.gif);
   position: fixed;
   top: 0%;
   left: 0px;
@@ -40,6 +41,7 @@ body {
 }
 .Guy:hover {
   left: 5px;
+  background: url(assets/Hover.gif);
 }
 
 @keyframes move-down {
