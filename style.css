@@ -36,7 +36,7 @@ p {
 }
 .MidGround {
   width: 100%;
-  z-index: 5;
+  z-index: 10;
 }
 
 /* SIDEBAR ELEMENTS */
@@ -46,15 +46,14 @@ p {
   background-repeat: repeat-y;
   z-index: 2;
   /* width: var(--sidebar-width); */
-  /* height: 100%; */
-  min-height: 100vh;
+  min-height: 100%;
 }
 img.Guy {
   src: "assets/Guy.gif";
   position: fixed;
   /* width: 50%; */
   /* width: calc(var(--sidebar-width) * 0.50); */
-  width: 0.625%;
+  width: 6.25%;
   top: 0%;
   left: 0px;
   z-index: 4;
