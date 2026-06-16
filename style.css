@@ -89,13 +89,13 @@ img.fixedTop {
 
 img.FG {
   right: 0;
-  width: calc(100vw - 128px);
+  width: 100vw;
   z-index: 1;
 }
 img.Sun {
   position: fixed;
   top: 0;
   right: 0;
-  width: calc(100vw - 128px);
+  width: 100vw;
   z-index: -1;
 }
