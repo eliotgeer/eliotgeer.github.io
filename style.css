@@ -89,7 +89,7 @@ img.fixedTop {
 
 img.FG {
   right: 0;
-  width: 100vw;
+  width: calc(100vw - 128px);
   z-index: 1;
 }
 img.Sun {
