@@ -35,7 +35,7 @@ p {
   grid-template-columns: 2fr 14fr;
   height: 100%;
 }
-.MidGround {
+img.MidGround {
   width: 100%;
   z-index: 10;
   position: fixed;
@@ -53,7 +53,7 @@ p {
   100% { bottom: -100%; }
 }
 img.GuyMed {
-  
+
 }
 
 /* SIDEBAR ELEMENTS */
@@ -82,6 +82,7 @@ img.Guy {
     top: 100%;
   } */
   50% { top: 100% }
+  100% { top: 100% }
 }
 
 /* FRONT PAGE ELEMENTS */
