@@ -26,14 +26,14 @@ body {
 
 .Guy {
     position: fixed;
-    top: 0px;
+    top: 0%;
     left: 0px;
     animation: move-down linear;
     animation-timeline: scroll();
 }
 
 @keyframes move-down {
-    to {top: 500px}
+    to {top: 100%}
 }
 
 .fixedBottom {
