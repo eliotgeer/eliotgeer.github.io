@@ -1,6 +1,6 @@
 body {
   margin: 0;
-  background: pink;
+  background: #14a02e;
   text-align: center;
 }
 
@@ -12,7 +12,7 @@ body {
 .big {
   font-family: BigFont;
   background-color: aquamarine;
-  font-size: 1000%;
+  font-size: 200%;
 }
 
 .page {
@@ -22,10 +22,15 @@ body {
 
 .Guy {
     position: fixed;
-    top: 16;
-    left: 16;
+    top: 16px;
+    left: 16px;
+}
+
+.PathEnd {
+    position: fixed;
+    bottom: 0px;
 }
 
 .scrollbar {
-    background-color: bisque;
+    background-color: #f4d29c;
 }
