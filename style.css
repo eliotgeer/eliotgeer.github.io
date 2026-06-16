@@ -28,7 +28,7 @@ body {
     position: fixed;
     top: 0%;
     left: 0px;
-    z-index: 1;
+    z-index: 2;
     animation: move-down linear;
     animation-timeline: scroll();
 }
@@ -41,7 +41,7 @@ body {
     position: fixed;
     bottom: 0px;
     left: 0px;
-    z-index: -1;
+    z-index: 1;
 }
 
 .scrollbar {
