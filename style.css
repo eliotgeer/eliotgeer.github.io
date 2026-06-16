@@ -94,6 +94,8 @@ img.Clouds {
   right: 0;
   width: 100%;
   z-index: 1;
+  animation: scroll-clouds linear;
+  animation-timeline: scroll();
 }
 img.Sun {
   position: fixed;
@@ -103,12 +105,17 @@ img.Sun {
   /* width: calc(var(--sidebar-width) * 0.50); */
   width: 83%;
   z-index: -1;
-  animation: scroll-slow linear;
+  animation: scroll-sun linear;
   animation-timeline: scroll();
 }
-@keyframes scroll-slow {
+@keyframes scroll-sun {
   to {
     top: -50%;
+  }
+}
+@keyframes scroll-clouds {
+  to {
+    top: -25%;
   }
 }
 
