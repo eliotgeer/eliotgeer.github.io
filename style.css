@@ -87,10 +87,10 @@ img.fixedTop {
 }
 
 img.FG {
-  width: 100vw;
+  width: calc(100vw - 128px);
 }
 img.Sun {
   position: fixed;
   top: 0;
-  width: 100vw;
+  width: calc(100vw - 128px);
 }
