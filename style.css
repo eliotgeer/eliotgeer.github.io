@@ -21,38 +21,43 @@ body {
 }
 
 .tan-bg {
-    background-color: #f4d29c;
+  background-color: #f4d29c;
 }
 
 .page {
-    display: grid;
-    grid-template-columns: 64px 1fr;
+  display: grid;
+  grid-template-columns: 64px 1fr;
 }
 
 .Guy {
-    src: "assets/Guy.gif";
-    position: fixed;
-    top: 0%;
-    left: 0px;
-    z-index: 2;
-    animation: move-down linear;
-    animation-timeline: scroll();
+  src: "assets/Guy.gif";
+  position: fixed;
+  top: 0%;
+  left: 0px;
+  z-index: 2;
+  animation: move-down linear;
+  animation-timeline: scroll();
 }
 .Guy:hover {
-    src: "assets/Hover.gif";
+  src: "assets/Hover.gif";
 }
 
 @keyframes move-down {
-    to {top: calc(100% - 64px)}
+  to {
+    top: calc(100% - 64px);
+  }
 }
 
 .fixedBottom {
-    position: fixed;
-    bottom: 0px;
-    left: 0px;
-    z-index: 1;
+  position: fixed;
+  bottom: 0px;
+  left: 0px;
+  z-index: 1;
 }
 
 .scrollbar {
-    background-color: #f4d29c;
+  /* background-color: #f4d29c; */
+  background-image: url(assets/GuyPath.png);
+  background-size: 64px;
+  background-repeat: repeat-y;
 }
