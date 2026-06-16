@@ -54,6 +54,12 @@ body {
   left: 0px;
   z-index: 1;
 }
+.fixedTop {
+  position: fixed;
+  top: 0px;
+  left: 0px;
+  z-index: 1;
+}
 
 .scrollbar {
   /* background-color: #f4d29c; */
