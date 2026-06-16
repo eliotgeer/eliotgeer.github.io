@@ -39,7 +39,8 @@ body {
 .fixedBottom {
     position: fixed;
     bottom: 0px;
-    left: 0px
+    left: 0px;
+    z-index: -1;
 }
 
 .scrollbar {
