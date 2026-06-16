@@ -1,3 +1,6 @@
+/* STYLE CSS */
+
+/* GLOBAL ELEMENTS */
 body {
   margin: 0;
   background: #249fde;
@@ -9,43 +12,39 @@ body {
   margin-right: 0;
   margin-left: 0;
 }
-
 p {
   margin: 0;
 }
-
 @font-face {
   font-family: BigFont;
   src: url(assets/BigFont.ttf);
 }
-
 .big {
   font-family: BigFont;
   font-size: 400%;
 }
-
-.tan-bg {
-  background-color: #f4d29c;
+.nine-box {
+  border-image: url(assets/NineBox.png) 80 80 80 80 fill / 40px 40px 40px 40px;
+  padding: 80px 80px 80px 80px;
+  margin: 32px;
 }
 
-.page {
+/* MAIN ELEMENTS */
+.PageGrid {
   display: grid;
-  grid-template-columns: 128px 1fr;
+  grid-template-columns: 2fr 14fr;
+}
+.MidGround {
+
 }
 
-/* .Guy {
-  src: "assets/Guy.gif";
-  position: fixed;
-  top: 0%;
-  left: 0px;
+/* SIDEBAR ELEMENTS */
+.Sidebar {
+  background-image: url(assets/GuyPath.png);
+  background-size: 100%;
+  background-repeat: repeat-y;
   z-index: 2;
-  animation: move-down linear;
-  animation-timeline: scroll();
 }
-.Guy:hover {
-  left: 5px;
-} */
-
 img.Guy {
   src: "assets/Guy.gif";
   position: fixed;
@@ -61,7 +60,68 @@ img.Guy {
   }
 }
 
-img.fixedBottom {
+/* FRONT PAGE ELEMENTS */
+.FrontPage {
+
+}
+img.Clouds {
+  right: 0;
+  width: 100%;
+  z-index: 1;
+}
+img.Sun {
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 100%;
+  z-index: -1;
+  animation: scroll-slow linear;
+  animation-timeline: scroll();
+}
+@keyframes scroll-slow {
+  to {
+    top: -100%;
+  }
+}
+
+/* .tan-bg {
+  background-color: #f4d29c;
+} */
+
+/* .page {
+  display: grid;
+  grid-template-columns: 128px 1fr;
+} */
+
+/* .Guy {
+  src: "assets/Guy.gif";
+  position: fixed;
+  top: 0%;
+  left: 0px;
+  z-index: 2;
+  animation: move-down linear;
+  animation-timeline: scroll();
+}
+.Guy:hover {
+  left: 5px;
+} */
+
+/* img.Guy {
+  src: "assets/Guy.gif";
+  position: fixed;
+  top: 0%;
+  left: 0px;
+  z-index: 4;
+  animation: move-down linear;
+  animation-timeline: scroll();
+}
+@keyframes move-down {
+  to {
+    top: calc(100% - 64px);
+  }
+} */
+
+/* img.fixedBottom {
   position: fixed;
   bottom: 0px;
   left: 0px;
@@ -72,22 +132,22 @@ img.fixedTop {
   top: 0px;
   left: 0px;
   z-index: 3;
-}
+} */
 
-.scrollbar {
+/* .scrollbar {
   background-image: url(assets/GuyPath.png);
   background-size: 128px;
   background-repeat: repeat-y;
   z-index: 2;
-}
+} */
 
-.nine-box {
+/* .nine-box {
   border-image: url(assets/NineBox.png) 80 80 80 80 fill / 40px 40px 40px 40px;
   padding: 80px 80px 80px 80px;
-  margin: 64px;
-}
+  margin: 32px;
+} */
 
-img.FG {
+/* img.FG {
   right: 0;
   width: calc(100vw - 128px);
   z-index: 1;
@@ -105,4 +165,4 @@ img.Sun {
   to {
     top: -100%;
   }
-}
+} */
