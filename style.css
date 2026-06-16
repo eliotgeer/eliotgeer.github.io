@@ -12,8 +12,11 @@ body {
 
 .big {
   font-family: BigFont;
-  background-color: aquamarine;
   font-size: 400%;
+}
+
+.blue-bg {
+    background-color: aquamarine;
 }
 
 .page {
