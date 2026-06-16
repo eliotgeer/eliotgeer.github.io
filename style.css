@@ -55,7 +55,6 @@ img.Guy {
   animation: move-down linear;
   animation-timeline: scroll();
 }
-
 @keyframes move-down {
   to {
     top: calc(100% - 64px);
@@ -99,4 +98,11 @@ img.Sun {
   right: 0;
   width: calc(100vw - 128px);
   z-index: -1;
+  animation: scroll-slow linear;
+  animation-timeline: scroll();
+}
+@keyframes scroll-slow {
+  to {
+    top: -50%;
+  }
 }
