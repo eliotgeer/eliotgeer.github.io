@@ -21,10 +21,16 @@ body {
     grid-template-columns: 64px 1fr;
 }
 
-.fixedTop {
+.Guy {
     position: fixed;
-    top: 0px;
+    top: 0%;
     left: 0px;
+    animation: linear;
+    animation-timeline: scroll();
+}
+
+@keyframes Guy {
+    to {top: 100%}
 }
 
 .fixedBottom {
