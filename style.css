@@ -30,6 +30,7 @@ body {
 }
 
 .Guy {
+    src: "assets/Guy.gif";
     position: fixed;
     top: 0%;
     left: 0px;
@@ -37,13 +38,16 @@ body {
     animation: move-down linear;
     animation-timeline: scroll();
 }
+.Guy:hover {
+    src: "assets/Hover.gif";
+}
 
 @keyframes move-down {
     to {top: calc(100% - 64px)}
 }
 
 .fixedBottom {
-    /* position: fixed; */
+    position: fixed;
     bottom: 0px;
     left: 0px;
     z-index: 1;
