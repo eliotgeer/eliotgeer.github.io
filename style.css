@@ -2,6 +2,7 @@ body {
   margin: 0;
   background: #14a02e;
   text-align: center;
+  font-size: large;
 }
 
 @font-face {
@@ -12,7 +13,7 @@ body {
 .big {
   font-family: BigFont;
   background-color: aquamarine;
-  font-size: 200%;
+  font-size: 500%;
 }
 
 .page {
@@ -29,6 +30,7 @@ body {
 .PathEnd {
     position: fixed;
     bottom: 0px;
+    left: 0px;
 }
 
 .scrollbar {
