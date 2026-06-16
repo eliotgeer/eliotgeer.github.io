@@ -52,6 +52,9 @@ p {
   75% { bottom: 0%; }
   100% { bottom: -100%; }
 }
+img.GuyMed {
+  
+}
 
 /* SIDEBAR ELEMENTS */
 .Sidebar {
