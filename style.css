@@ -97,5 +97,5 @@ img.Sun {
   top: 0;
   right: 0;
   width: calc(100vw - 128px);
-  z-index: 0;
+  z-index: -1;
 }
