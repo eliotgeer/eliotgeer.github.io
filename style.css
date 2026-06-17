@@ -58,10 +58,10 @@ img.Hill {
   100% { bottom: -100%; }
 }
 img.GuyMed {
-  width: 7.1%;
+  width: 5%;
   z-index: 5;
-  top: 0%;
-  left: 0%;
+  top: 20%;
+  left: 50%;
 }
 
 /* SIDEBAR ELEMENTS */
