@@ -70,13 +70,14 @@ img.GuyMed {
   z-index: 5;
   top: -20%;
   left: 50%; */
-  width: 5%;
-  left: 0;
+  width: 10%;
+  left: 1;
   z-index: 100;
   position: fixed;
-  bottom: -100%;
-  animation: guy-up-down ease-in-out;
-  animation-timeline: scroll();
+  /* bottom: -100%; */
+  bottom: 50vw;
+  /* animation: guy-up-down ease-in-out;
+  animation-timeline: scroll(); */
 }
 @keyframes guy-up-down {
   30% { bottom: -100%; }
