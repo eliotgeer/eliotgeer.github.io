@@ -33,11 +33,24 @@ p {
 .PageGrid {
   display: grid;
   /* grid-template-columns: 2fr 14fr; */
-  grid-template-columns: 1fr 9fr;
+  grid-template-columns: 10% 90%;
   height: 100%;
 }
 .MidGround {
-  background-image: url(assets/Hill.png);
+  /* background-image: url(assets/Hill.png);
+  width: 100%;
+  z-index: 10;
+  position: fixed;
+  bottom: -100%;
+  left: 0;
+  animation: up-down ease-in-out;
+  animation-timeline: scroll(); */
+}
+img.Hill {
+  /* width: 100%;
+  z-index: 10;
+  bottom: 0;
+  left: 0; */
   width: 100%;
   z-index: 10;
   position: fixed;
@@ -46,12 +59,6 @@ p {
   animation: up-down ease-in-out;
   animation-timeline: scroll();
 }
-/* img.Hill {
-  width: 100%;
-  z-index: 10;
-  bottom: 0;
-  left: 0;
-} */
 @keyframes up-down {
   30% { bottom: -100%; }
   60% { bottom: 0%; }
@@ -59,10 +66,17 @@ p {
   100% { bottom: -100%; }
 }
 img.GuyMed {
-  width: 5%;
+  /* width: 5%;
   z-index: 5;
   top: -20%;
-  left: 50%;
+  left: 50%; */
+  width: 5%;
+  z-index: 10;
+  position: fixed;
+  bottom: -100%;
+  left: 25%;
+  animation: up-down ease-in-out;
+  animation-timeline: scroll();
 }
 
 /* SIDEBAR ELEMENTS */
@@ -76,7 +90,7 @@ img.GuyMed {
 img.Guy {
   src: "assets/Guy.gif";
   position: fixed;
-  width: 6.25%;
+  width: 5%;
   top: 0%;
   left: 0px;
   z-index: 4;
