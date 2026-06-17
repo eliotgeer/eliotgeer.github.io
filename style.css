@@ -33,10 +33,11 @@ p {
 .PageGrid {
   display: grid;
   /* grid-template-columns: 2fr 14fr; */
-  grid-template-columns: 10% 90%;
+  grid-template-columns: 1fr 9fr;
   height: 100%;
 }
 .MidGround {
+  background-image: url(assets/Hill.png);
   width: 100%;
   z-index: 10;
   position: fixed;
@@ -45,12 +46,12 @@ p {
   animation: up-down ease-in-out;
   animation-timeline: scroll();
 }
-img.Hill {
+/* img.Hill {
   width: 100%;
   z-index: 10;
   bottom: 0;
   left: 0;
-}
+} */
 @keyframes up-down {
   30% { bottom: -100%; }
   60% { bottom: 0%; }
@@ -60,7 +61,7 @@ img.Hill {
 img.GuyMed {
   width: 5%;
   z-index: 5;
-  top: 20%;
+  top: -20%;
   left: 50%;
 }
 
