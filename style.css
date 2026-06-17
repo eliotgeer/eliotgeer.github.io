@@ -80,9 +80,9 @@ img.GuyMed {
 }
 @keyframes guy-up-down {
   30% { bottom: -100%; left: -5%; }
-  55% { bottom: -20%; left: 5%; }
-  90% { bottom: -150%; left: 20%; }
-  100% { bottom: -150%; left: 20%; }
+  55% { bottom: -25%; left: 5%; }
+  90% { bottom: -150%; left: 30%; }
+  100% { bottom: -150%; left: 30%; }
 }
 @keyframes z-switch {
   44% { z-index: 9; }
