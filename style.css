@@ -49,16 +49,8 @@ img.Hill {
   z-index: 10;
   bottom: 0;
   left: 0;
-  /* position: fixed;
-  bottom: -100%;
-  left: 0;
-  animation: up-down ease-in-out;
-  animation-timeline: scroll(); */
 }
 @keyframes up-down {
-  /* to {
-    bottom: 0%, -100%;
-  } */
   30% { bottom: -100%; }
   60% { bottom: 0%; }
   90% { bottom: -100%; }
@@ -66,11 +58,9 @@ img.Hill {
 }
 img.GuyMed {
   width: 7.1%;
-  z-index: 9;
-  position: fixed;
-  bottom: -100;
+  z-index: 5;
+  bottom: 20%;
   left: 20%;
-
 }
 
 /* SIDEBAR ELEMENTS */
@@ -79,14 +69,11 @@ img.GuyMed {
   background-size: 100%;
   background-repeat: repeat-y;
   z-index: 2;
-  /* width: var(--sidebar-width); */
   min-height: 100%;
 }
 img.Guy {
   src: "assets/Guy.gif";
   position: fixed;
-  /* width: 50%; */
-  /* width: calc(var(--sidebar-width) * 0.50); */
   width: 6.25%;
   top: 0%;
   left: 0px;
@@ -95,9 +82,6 @@ img.Guy {
   animation-timeline: scroll();
 }
 @keyframes move-down {
-  /* to {
-    top: 100%;
-  } */
   50% { top: 100% }
   100% { top: 100% }
 }
@@ -110,9 +94,8 @@ img.Clouds {
   position: fixed;
   top: 0;
   right: 0;
-  /* width: 100%; */
-  width: 83%;
-  z-index: 1;
+  width: 90%;
+  z-index: -1;
   animation: scroll-clouds linear;
   animation-timeline: scroll();
 }
@@ -120,10 +103,8 @@ img.Sun {
   position: fixed;
   top: 0;
   right: 0;
-  /* width: calc(100% - 2fr); */
-  /* width: calc(var(--sidebar-width) * 0.50); */
-  width: 83%;
-  z-index: -1;
+  width: 90%;
+  z-index: -2;
   animation: scroll-sun linear;
   animation-timeline: scroll();
 }
@@ -134,89 +115,6 @@ img.Sun {
 }
 @keyframes scroll-clouds {
   to {
-    top: -25%;
+    top: -75%;
   }
 }
-
-/* .tan-bg {
-  background-color: #f4d29c;
-} */
-
-/* .page {
-  display: grid;
-  grid-template-columns: 128px 1fr;
-} */
-
-/* .Guy {
-  src: "assets/Guy.gif";
-  position: fixed;
-  top: 0%;
-  left: 0px;
-  z-index: 2;
-  animation: move-down linear;
-  animation-timeline: scroll();
-}
-.Guy:hover {
-  left: 5px;
-} */
-
-/* img.Guy {
-  src: "assets/Guy.gif";
-  position: fixed;
-  top: 0%;
-  left: 0px;
-  z-index: 4;
-  animation: move-down linear;
-  animation-timeline: scroll();
-}
-@keyframes move-down {
-  to {
-    top: calc(100% - 64px);
-  }
-} */
-
-/* img.fixedBottom {
-  position: fixed;
-  bottom: 0px;
-  left: 0px;
-  z-index: 3;
-}
-img.fixedTop {
-  position: fixed;
-  top: 0px;
-  left: 0px;
-  z-index: 3;
-} */
-
-/* .scrollbar {
-  background-image: url(assets/GuyPath.png);
-  background-size: 128px;
-  background-repeat: repeat-y;
-  z-index: 2;
-} */
-
-/* .nine-box {
-  border-image: url(assets/NineBox.png) 80 80 80 80 fill / 40px 40px 40px 40px;
-  padding: 80px 80px 80px 80px;
-  margin: 32px;
-} */
-
-/* img.FG {
-  right: 0;
-  width: calc(100vw - 128px);
-  z-index: 1;
-}
-img.Sun {
-  position: fixed;
-  top: 0;
-  right: 0;
-  width: calc(100vw - 128px);
-  z-index: -1;
-  animation: scroll-slow linear;
-  animation-timeline: scroll();
-}
-@keyframes scroll-slow {
-  to {
-    top: -100%;
-  }
-} */
