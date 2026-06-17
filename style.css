@@ -70,20 +70,19 @@ img.GuyMed {
   z-index: 5;
   top: -20%;
   left: 50%; */
-  width: 10%;
-  left: 1;
-  z-index: 100;
+  width: 100%;
+  z-index: 10;
   position: fixed;
-  /* bottom: -100%; */
-  bottom: 50vw;
-  /* animation: guy-up-down ease-in-out;
-  animation-timeline: scroll(); */
+  bottom: -100%;
+  left: 0%;
+  animation: hill-up-down ease-in-out;
+  animation-timeline: scroll();
 }
 @keyframes guy-up-down {
-  30% { bottom: -100%; }
-  60% { bottom: 25%; }
-  90% { bottom: -100%; }
-  100% { bottom: -100%; }
+  30% { bottom: -100%; left: 0%; }
+  60% { bottom: 25%; left: 5%; }
+  90% { bottom: -100%; left: 10%; }
+  100% { bottom: -100%; left: 10%; }
 }
 
 /* SIDEBAR ELEMENTS */
