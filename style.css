@@ -91,6 +91,22 @@ img.GuyMed {
   90% { bottom: -150%; left: 40%; }
   100% { bottom: -150%; left: 40%; }
 }
+.PageEnd {
+
+}
+img.View {
+  z-index: 99;
+  min-width: 100%;
+  position: fixed;
+  bottom: -100;
+  left: 0;
+  animation: down-up ease-out;
+  animation-timeline: scroll();
+}
+@keyframes down-up {
+  75% { bottom: -100%; }
+  100% { bottom: 0%; }
+}
 
 /* SIDEBAR ELEMENTS */
 .Sidebar {
