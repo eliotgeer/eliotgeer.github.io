@@ -56,10 +56,10 @@ img.Hill {
   position: fixed;
   bottom: -100%;
   left: 0;
-  animation: up-down ease-in-out;
+  animation: hill-up-down ease-in-out;
   animation-timeline: scroll();
 }
-@keyframes up-down {
+@keyframes hill-up-down {
   30% { bottom: -100%; }
   60% { bottom: 0%; }
   90% { bottom: -100%; }
@@ -71,11 +71,18 @@ img.GuyMed {
   top: -20%;
   left: 50%; */
   width: 5%;
+  left:0%;
   z-index: 100;
   position: fixed;
   bottom: -100%;
-  animation: up-down ease-in-out;
+  animation: guy-up-down ease-in-out;
   animation-timeline: scroll();
+}
+@keyframes hill-up-down {
+  30% { bottom: -100%; }
+  60% { bottom: 25%; }
+  90% { bottom: -100%; }
+  100% { bottom: -100%; }
 }
 
 /* SIDEBAR ELEMENTS */
@@ -97,7 +104,7 @@ img.Guy {
   animation-timeline: scroll();
 }
 @keyframes move-down {
-  40% { top: 100% }
+  50% { top: 100% }
   100% { top: 100% }
 }
 
