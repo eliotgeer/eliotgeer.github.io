@@ -45,7 +45,8 @@ p {
   left: 0;
   animation: up-down ease-in-out;
   animation-timeline: scroll(); */
-  width: 100;
+  z-index: 10;
+  min-width: 100%;
   position: fixed;
   bottom: -100;
   left: 0;
