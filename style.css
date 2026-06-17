@@ -54,7 +54,12 @@ img.MidGround {
   100% { bottom: -100%; }
 }
 img.GuyMed {
-
+  width: 7.1%;
+  z-index: 9;
+  position: fixed;
+  bottom: -100;
+  left: 20%;
+  
 }
 
 /* SIDEBAR ELEMENTS */
@@ -91,8 +96,11 @@ img.Guy {
   /* width: var(--frontpage-width); */
 }
 img.Clouds {
+  position: fixed;
+  top: 0;
   right: 0;
-  width: 100%;
+  /* width: 100%; */
+  width: 83%;
   z-index: 1;
   animation: scroll-clouds linear;
   animation-timeline: scroll();
