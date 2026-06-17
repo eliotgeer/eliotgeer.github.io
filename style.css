@@ -45,19 +45,24 @@ p {
   left: 0;
   animation: up-down ease-in-out;
   animation-timeline: scroll(); */
+  width: 100;
+  position: fixed;
+  bottom: -100;
+  left: 0;
+  animation: hill-up-down ease-in-out;
+  animation-timeline: scroll();
 }
 img.Hill {
-  /* width: 100%;
-  z-index: 10;
-  bottom: 0;
-  left: 0; */
   width: 100%;
   z-index: 10;
-  position: fixed;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  /* position: fixed;
   bottom: -100%;
   left: 0%;
   animation: hill-up-down ease-in-out;
-  animation-timeline: scroll();
+  animation-timeline: scroll(); */
 }
 @keyframes hill-up-down {
   30% { bottom: -100%; }
@@ -66,31 +71,23 @@ img.Hill {
   100% { bottom: -100%; }
 }
 img.GuyMed {
-  /* width: 5%;
-  z-index: 5;
-  top: -20%;
-  left: 50%; */
   width: 100%;
-  /* z-index: 9; */
   z-index: 15;
-  position: fixed;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  /* position: fixed;
   bottom: -100%;
   left: -5%;
-  /* animation: guy-up-down ease-in-out, z-switch ease-in-out; */
   animation: guy-up-down ease-in-out;
-  animation-timeline: scroll();
+  animation-timeline: scroll(); */
 }
 @keyframes guy-up-down {
   30% { bottom: -100%; left: -5%; }
-  55% { bottom: -25%; left: 10%; }
-  90% { bottom: -150%; left: 35%; }
-  100% { bottom: -150%; left: 35%; }
+  55% { bottom: -25%; left: 5%; }
+  90% { bottom: -150%; left: 40%; }
+  100% { bottom: -150%; left: 40%; }
 }
-/* @keyframes z-switch {
-  44% { z-index: 9; }
-  55% { z-index: 15; }
-  100% { z-index: 15; }
-} */
 
 /* SIDEBAR ELEMENTS */
 .Sidebar {
