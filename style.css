@@ -50,14 +50,14 @@ p {
   position: fixed;
   bottom: -100;
   left: 0;
-  animation: hill-up-down ease-in-out;
+  animation: up-down ease-in-out;
   animation-timeline: scroll();
 }
 img.Hill {
   width: 100%;
   z-index: 10;
   position: absolute;
-  bottom: 0;
+  bottom: -100%;
   left: 0;
   /* position: fixed;
   bottom: -100%;
@@ -65,7 +65,7 @@ img.Hill {
   animation: hill-up-down ease-in-out;
   animation-timeline: scroll(); */
 }
-@keyframes hill-up-down {
+@keyframes up-down {
   30% { bottom: -100%; }
   60% { bottom: 0%; }
   90% { bottom: -100%; }
@@ -75,8 +75,10 @@ img.GuyMed {
   width: 100%;
   z-index: 15;
   position: absolute;
-  bottom: 0;
+  bottom: -100%;
   left: 0;
+  animation: guy-up-down ease-in-out;
+  animation-timeline: scroll();
   /* position: fixed;
   bottom: -100%;
   left: -5%;
