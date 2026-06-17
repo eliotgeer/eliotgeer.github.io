@@ -71,10 +71,9 @@ img.GuyMed {
   top: -20%;
   left: 50%; */
   width: 5%;
-  z-index: 10;
+  z-index: 100;
   position: fixed;
   bottom: -100%;
-  left: 25%;
   animation: up-down ease-in-out;
   animation-timeline: scroll();
 }
@@ -94,11 +93,11 @@ img.Guy {
   top: 0%;
   left: 0px;
   z-index: 4;
-  animation: move-down linear;
+  animation: move-down ease-in;
   animation-timeline: scroll();
 }
 @keyframes move-down {
-  50% { top: 100% }
+  40% { top: 100% }
   100% { top: 100% }
 }
 
