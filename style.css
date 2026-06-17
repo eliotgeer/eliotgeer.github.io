@@ -35,7 +35,7 @@ p {
   grid-template-columns: 2fr 14fr;
   height: 100%;
 }
-img.MidGround {
+.MidGround {
   width: 100%;
   z-index: 10;
   position: fixed;
@@ -43,6 +43,17 @@ img.MidGround {
   left: 0;
   animation: up-down ease-in-out;
   animation-timeline: scroll();
+}
+img.Hill {
+  width: 100%;
+  z-index: 10;
+  bottom: 0;
+  left: 0;
+  /* position: fixed;
+  bottom: -100%;
+  left: 0;
+  animation: up-down ease-in-out;
+  animation-timeline: scroll(); */
 }
 @keyframes up-down {
   /* to {
@@ -59,7 +70,7 @@ img.GuyMed {
   position: fixed;
   bottom: -100;
   left: 20%;
-  
+
 }
 
 /* SIDEBAR ELEMENTS */
