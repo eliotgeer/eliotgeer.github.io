@@ -76,7 +76,8 @@ img.GuyMed {
   width: 100%;
   z-index: 15;
   position: absolute;
-  bottom: -100%;
+  /* bottom: -100%; */
+  top: 0;
   left: 0;
   animation: guy-up-down ease-in-out;
   animation-timeline: scroll();
@@ -87,18 +88,23 @@ img.GuyMed {
   animation-timeline: scroll(); */
 }
 @keyframes guy-up-down {
-  0% { bottom: -100%; left: -5%; }
+  /* 0% { bottom: -100%; left: -5%; }
   30% { bottom: -100%; left: -5%; }
   55% { bottom: -25%; left: 5%; }
   90% { bottom: -150%; left: 20%; }
-  100% { bottom: -150%; left: 20%; }
+  100% { bottom: -150%; left: 20%; } */
+  0% { left: -5%; }
+  30% { left: -5%; }
+  55% { left: 5%; }
+  90% { left: 20%; }
+  100% { left: 20%; }
 }
 .PageEnd {
 
 }
 img.View {
   z-index: 99;
-  min-width: 100%;
+  width: 100%;
   position: fixed;
   bottom: -100;
   left: 0;
@@ -106,6 +112,7 @@ img.View {
   animation-timeline: scroll();
 }
 @keyframes down-up {
+  0% { bottom: -100%; }
   75% { bottom: -100%; }
   100% { bottom: 0%; }
 }
