@@ -76,8 +76,8 @@ img.GuyMed {
   width: 100%;
   z-index: 15;
   position: absolute;
-  /* bottom: -100%; */
-  top: 0;
+  bottom: -25%;
+  /* top: 0; */
   left: 0;
   animation: guy-up-down ease-in-out;
   animation-timeline: scroll();
@@ -108,7 +108,7 @@ img.View {
   position: fixed;
   bottom: -100;
   left: 0;
-  animation: down-up ease-out;
+  animation: down-up linear;
   animation-timeline: scroll();
 }
 @keyframes down-up {
