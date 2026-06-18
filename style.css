@@ -21,30 +21,22 @@ p {
 }
 .big {
   font-family: BigFont;
-  font-size: 400%;
 }
 .nine-box {
   border-image: url(assets/NineBox.png) 80 80 80 80 fill / 40px 40px 40px 40px;
   padding: 80px 80px 80px 80px;
-  margin: 32px;
+  margin-top: 5vw;
+  margin-bottom: 5vw;
 }
 
 /* MAIN ELEMENTS */
 .PageGrid {
   display: grid;
-  /* grid-template-columns: 2fr 14fr; */
-  grid-template-columns: 10% 90%;
-  height: 100%;
+  /* grid-template-columns: 10% 90%; */
+  grid-template-columns: clamp(10vh, 10vw, 10vw) 90vw;
+  min-height: 100%;
 }
 .MidGround {
-  /* background-image: url(assets/Hill.png);
-  width: 100%;
-  z-index: 10;
-  position: fixed;
-  bottom: -100%;
-  left: 0;
-  animation: up-down ease-in-out;
-  animation-timeline: scroll(); */
   z-index: 10;
   min-width: 100%;
   position: fixed;
@@ -54,16 +46,12 @@ p {
   animation-timeline: scroll();
 }
 img.Hill {
-  width: 100%;
+  /* width: 100%; */
+  width: clamp(115vh,100vw,200vw);
   z-index: 10;
   position: absolute;
   bottom: -100%;
   left: 0;
-  /* position: fixed;
-  bottom: -100%;
-  left: 0%;
-  animation: hill-up-down ease-in-out;
-  animation-timeline: scroll(); */
 }
 @keyframes up-down {
   0% { bottom: -100%; }
@@ -73,41 +61,33 @@ img.Hill {
   100% { bottom: -100%; }
 }
 img.GuyMed {
-  width: 100%;
+  /* width: 100%; */
+  width: clamp(115vh,100vw,200vw);
   z-index: 15;
-  position: absolute;
-  bottom: -50%;
-  /* top: 0; */
+  position: fixed;
+  bottom: -100%;
   left: 0;
   animation: guy-up-down ease-in-out;
   animation-timeline: scroll();
-  /* position: fixed;
-  bottom: -100%;
-  left: -5%;
-  animation: guy-up-down ease-in-out;
-  animation-timeline: scroll(); */
 }
 @keyframes guy-up-down {
-  /* 0% { bottom: -100%; left: -5%; }
-  30% { bottom: -100%; left: -5%; }
-  55% { bottom: -25%; left: 5%; }
-  90% { bottom: -150%; left: 20%; }
-  100% { bottom: -150%; left: 20%; } */
-  0% { left: -5%; }
-  30% { left: -5%; }
-  55% { left: 5%; }
-  90% { left: 20%; }
-  100% { left: 20%; }
+  0% { bottom: -100%; left: -25vw; }
+  30% { bottom: -100%; left: -25vw; }
+  60% { bottom: 0%; left: 2vw; }
+  90% { bottom: -300%; left: 250vw; }
+  100% { bottom: -300%; left: 250vw; }
 }
 .PageEnd {
 
 }
 img.View {
   z-index: 99;
-  width: 100%;
+  /* width: 100%; */
+  /* width: 100vw; */
+  width: clamp(115vh,100vw,200vw);
   position: fixed;
   bottom: -100;
-  left: 0;
+  right: 0;
   animation: down-up linear;
   animation-timeline: scroll();
 }
@@ -128,7 +108,8 @@ img.View {
 img.Guy {
   src: "assets/Guy.gif";
   position: fixed;
-  width: 5%;
+  /* width: 5%; */
+  width: clamp(5vh, 5vw, 5vw);
   top: 0%;
   left: 0px;
   z-index: 4;
@@ -143,13 +124,13 @@ img.Guy {
 
 /* FRONT PAGE ELEMENTS */
 .FrontPage {
-  
 }
 img.Clouds {
   position: fixed;
   top: 0;
-  right: 0;
-  width: 90%;
+  left: calc(50% + clamp(5vh, 5vw, 5vw));
+  transform: translateX(-50%);
+  width: clamp(100vh,90vw,90vw);
   z-index: -1;
   animation: scroll-clouds linear;
   animation-timeline: scroll();
@@ -157,8 +138,12 @@ img.Clouds {
 img.Sun {
   position: fixed;
   top: 0;
-  right: 0;
-  width: 90%;
+  /* right: 0;
+  width: 90vw; */
+  /* left: 55%; */
+  left: calc(50% + clamp(5vh, 5vw, 5vw));
+  transform: translateX(-50%);
+  width: clamp(100vh,90vw,90vw);
   z-index: -2;
   animation: scroll-sun linear;
   animation-timeline: scroll();
@@ -172,4 +157,12 @@ img.Sun {
   to {
     top: -75%;
   }
+}
+
+.TextBody {
+  margin: 5vw;
+  font-size: clamp(5vh, 3vw, 4vw);
+  /* margin-right: 10vw; */
+  /* margin-left: 5vw;
+  margin-right: 5vw; */
 }
