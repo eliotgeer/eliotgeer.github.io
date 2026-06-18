@@ -76,7 +76,7 @@ img.GuyMed {
   width: 100%;
   z-index: 15;
   position: absolute;
-  bottom: -25%;
+  bottom: -50%;
   /* top: 0; */
   left: 0;
   animation: guy-up-down ease-in-out;
@@ -93,9 +93,9 @@ img.GuyMed {
   55% { bottom: -25%; left: 5%; }
   90% { bottom: -150%; left: 20%; }
   100% { bottom: -150%; left: 20%; } */
-  0% { left: -5%; bottom: -25%; }
-  30% { left: -5%; bottom: -25%; }
-  55% { left: 5%; bottom: 0%; }
+  0% { left: -5%; }
+  30% { left: -5%; }
+  55% { left: 5%; }
   90% { left: 20%; }
   100% { left: 20%; }
 }
