@@ -11,6 +11,8 @@ body {
   margin-bottom: 0;
   margin-right: 0;
   margin-left: 0;
+
+  /* overflow-x: clip; */
 }
 p {
   margin: 0;
@@ -74,8 +76,8 @@ img.GuyMed {
   0% { bottom: -100%; left: -25vw; }
   30% { bottom: -100%; left: -25vw; }
   60% { bottom: 0%; left: 2vw; }
-  90% { bottom: -300%; left: 250vw; }
-  100% { bottom: -300%; left: 250vw; }
+  90% { bottom: -300%; left: 90vw; }
+  100% { bottom: -300%; left: 90vw; }
 }
 .PageEnd {
 
@@ -160,9 +162,9 @@ img.Sun {
 }
 
 .TextBody {
-  margin: 5vw;
+  /* margin: 5vw; */
   font-size: clamp(5vh, 3vw, 4vw);
   /* margin-right: 10vw; */
-  /* margin-left: 5vw;
-  margin-right: 5vw; */
+  margin-left: 5vw;
+  margin-right: 5vw;
 }
