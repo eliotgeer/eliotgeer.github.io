@@ -1,5 +1,11 @@
 /* STYLE CSS */
 
+@property --side-offset {
+  syntax: "<length-percentage>";
+  inherits: true;
+  initial-value: 5vw;
+}
+
 /* GLOBAL ELEMENTS */
 body {
   margin: 0;
@@ -20,18 +26,18 @@ p {
 }
 @font-face {
   font-family: BigFont;
-  src: url(assets/BigFont.ttf);
+  src: url(/assets/BigFont.ttf);
 }
 /* .big {
   font-family: BigFont;
 } */
 h1 {
-  font-size: 5vw;
+  font-size: clamp(1.75rem, 5vw, 4rem);
   font-weight: bold;
 }
 .nine-box {
-  border-image: url(assets/NineBox.png) 80 80 80 80 fill / 40px 40px 40px 40px;
-  padding: 80px 80px 80px 80px;
+  border-image: url(/assets/NineBox.png) 80 80 80 80 fill / 40px 40px 40px 40px;
+  padding: clamp(20px, 8vw, 80px);
   margin-top: 5vw;
   margin-bottom: 5vw;
 }
@@ -40,8 +46,9 @@ h1 {
 .PageGrid {
   display: grid;
   /* grid-template-columns: 10% 90%; */
-  grid-template-columns: clamp(10vh, 10vw, 10vw) 90vw 0vw;
-  min-height: 100%;
+  grid-template-columns: clamp(min(10vh, 14vw), 10vw, 10vw) 90vw 0vw;
+  --side-offset: clamp(min(5vh, 7vw), 5vw, 5vw);
+  min-height: 220vh;
   /* animation: sidebar-move ease-in;
   animation-timeline: scroll(); */
   animation: page-grid-center ease-in;
@@ -55,30 +62,34 @@ h1 {
 } */
 @keyframes page-grid-center {
   0% {
-    grid-template-columns: clamp(10vh, 10vw, 10vw) 90vw 0vw;
+    grid-template-columns: clamp(min(10vh, 14vw), 10vw, 10vw) 90vw 0vw;
+    --side-offset: clamp(min(5vh, 7vw), 5vw, 5vw);
   }
   30% {
-    grid-template-columns: clamp(10vh, 10vw, 10vw) 90vw 0vw;
+    grid-template-columns: clamp(min(10vh, 14vw), 10vw, 10vw) 90vw 0vw;
+    --side-offset: clamp(min(5vh, 7vw), 5vw, 5vw);
   }
   50% {
     grid-template-columns: 5vw 90vw 5vw;
+    --side-offset: 0vw;
   }
   100% {
     grid-template-columns: 5vw 90vw 5vw;
+    --side-offset: 0vw;
   }
 }
 .MidGround {
   z-index: 10;
   min-width: 100%;
   position: fixed;
-  bottom: -100;
+  bottom: -100%;
   left: 0;
   animation: up-down ease-in-out;
   animation-timeline: scroll();
 }
 img.Hill {
   /* width: 100%; */
-  width: clamp(115vh, 100vw, 200vw);
+  width: clamp(min(115vh, 150vw), 100vw, 200vw);
   z-index: 10;
   position: absolute;
   bottom: -100%;
@@ -103,7 +114,7 @@ img.Hill {
 }
 img.GuyMed {
   /* width: 100%; */
-  width: clamp(115vh, 100vw, 200vw);
+  width: clamp(min(115vh, 150vw), 100vw, 200vw);
   z-index: 15;
   position: fixed;
   bottom: -100%;
@@ -139,9 +150,9 @@ img.View {
   z-index: 99;
   /* width: 100%; */
   /* width: 100vw; */
-  width: clamp(115vh, 100vw, 200vw);
+  width: clamp(min(115vh, 150vw), 100vw, 200vw);
   position: fixed;
-  bottom: -100;
+  bottom: -100%;
   right: 0;
   animation: down-up linear;
   animation-timeline: scroll();
@@ -160,7 +171,7 @@ img.View {
 
 /* SIDEBAR ELEMENTS */
 .Sidebar {
-  background-image: url(assets/GuyPath.png);
+  background-image: url(/assets/GuyPath.png);
   background-size: 100%;
   background-repeat: repeat-y;
   z-index: 2;
@@ -186,7 +197,7 @@ img.Guy {
   src: "assets/Guy.gif";
   position: fixed;
   /* width: 5%; */
-  width: clamp(5vh, 5vw, 5vw);
+  width: clamp(min(5vh, 8vw), 5vw, 5vw);
   top: 0%;
   left: 0px;
   z-index: 4;
@@ -207,13 +218,16 @@ img.Guy {
 
 /* FRONT PAGE ELEMENTS */
 .FrontPage {
+  justify-self: center;
+  width: 100%;
+  max-width: 75rem;
 }
 img.Clouds {
   position: fixed;
   top: 0;
-  left: calc(50% + clamp(5vh, 5vw, 5vw));
+  left: calc(50% + var(--side-offset));
   transform: translateX(-50%);
-  width: clamp(100vh, 90vw, 90vw);
+  width: clamp(min(100vh, 120vw), 90vw, 90vw);
   z-index: -1;
   animation: scroll-clouds linear;
   animation-timeline: scroll();
@@ -224,9 +238,9 @@ img.Sun {
   /* right: 0;
   width: 90vw; */
   /* left: 55%; */
-  left: calc(50% + clamp(5vh, 5vw, 5vw));
+  left: calc(50% + var(--side-offset));
   transform: translateX(-50%);
-  width: clamp(100vh, 90vw, 90vw);
+  width: clamp(min(100vh, 120vw), 90vw, 90vw);
   z-index: -2;
   animation: scroll-sun linear;
   animation-timeline: scroll();
@@ -244,7 +258,7 @@ img.Sun {
 
 .TextBody {
   /* margin: 5vw; */
-  font-size: clamp(5vh, 3vw, 4vw);
+  font-size: clamp(1rem, 0.6rem + 1.8vw, 1.75rem);
   /* margin-right: 10vw; */
   margin-left: 5vw;
   margin-right: 5vw;
