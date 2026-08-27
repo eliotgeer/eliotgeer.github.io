@@ -13,6 +13,7 @@ body {
   margin-left: 0;
 
   overflow-x: clip;
+  font-family: BigFont;
 }
 p {
   margin: 0;
@@ -21,8 +22,12 @@ p {
   font-family: BigFont;
   src: url(assets/BigFont.ttf);
 }
-.big {
+/* .big {
   font-family: BigFont;
+} */
+h1 {
+  font-size: 5vw;
+  font-weight: bold;
 }
 .nine-box {
   border-image: url(assets/NineBox.png) 80 80 80 80 fill / 40px 40px 40px 40px;
@@ -35,8 +40,32 @@ p {
 .PageGrid {
   display: grid;
   /* grid-template-columns: 10% 90%; */
-  grid-template-columns: clamp(10vh, 10vw, 10vw) 90vw;
+  grid-template-columns: clamp(10vh, 10vw, 10vw) 90vw 0vw;
   min-height: 100%;
+  /* animation: sidebar-move ease-in;
+  animation-timeline: scroll(); */
+  animation: page-grid-center ease-in;
+  animation-timeline: scroll();
+}
+/* @keyframes sidebar-move {
+  0% { grid-template-columns: clamp(10vh, 10vw, 10vw) 90vw; }
+  50% { grid-template-columns: clamp(10vh, 10vw, 10vw) 90vw; }
+  60% { grid-template-columns: 0 100vw; }
+  100% { grid-template-columns: 0 100vw; }
+} */
+@keyframes page-grid-center {
+  0% {
+    grid-template-columns: clamp(10vh, 10vw, 10vw) 90vw 0vw;
+  }
+  30% {
+    grid-template-columns: clamp(10vh, 10vw, 10vw) 90vw 0vw;
+  }
+  50% {
+    grid-template-columns: 5vw 90vw 5vw;
+  }
+  100% {
+    grid-template-columns: 5vw 90vw 5vw;
+  }
 }
 .MidGround {
   z-index: 10;
@@ -49,44 +78,68 @@ p {
 }
 img.Hill {
   /* width: 100%; */
-  width: clamp(115vh,100vw,200vw);
+  width: clamp(115vh, 100vw, 200vw);
   z-index: 10;
   position: absolute;
   bottom: -100%;
   left: 0;
 }
 @keyframes up-down {
-  0% { bottom: -100%; }
-  30% { bottom: -100%; }
-  60% { bottom: 0%; }
-  90% { bottom: -100%; }
-  100% { bottom: -100%; }
+  0% {
+    bottom: -100%;
+  }
+  30% {
+    bottom: -100%;
+  }
+  60% {
+    bottom: 0%;
+  }
+  90% {
+    bottom: -100%;
+  }
+  100% {
+    bottom: -100%;
+  }
 }
 img.GuyMed {
   /* width: 100%; */
-  width: clamp(115vh,100vw,200vw);
+  width: clamp(115vh, 100vw, 200vw);
   z-index: 15;
   position: fixed;
   bottom: -100%;
-  left: 0;
+  /* left: 0; */
   animation: guy-up-down ease-in-out;
   animation-timeline: scroll();
 }
 @keyframes guy-up-down {
-  0% { bottom: -100%; left: -25vw; }
-  30% { bottom: -100%; left: -25vw; }
-  60% { bottom: 0%; left: 2vw; }
-  90% { bottom: -300%; left: 90vw; }
-  100% { bottom: -300%; left: 90vw; }
+  0% {
+    bottom: -100%;
+    left: -10vw;
+  }
+  30% {
+    bottom: -100%;
+    left: -10vw;
+  }
+  60% {
+    bottom: 0%;
+    left: 2vw;
+  }
+  90% {
+    bottom: -300%;
+    left: 90vw;
+  }
+  100% {
+    bottom: -300%;
+    left: 90vw;
+  }
 }
 .PageEnd {
-
 }
 img.View {
   z-index: 99;
   /* width: 100%; */
   /* width: 100vw; */
-  width: clamp(115vh,100vw,200vw);
+  width: clamp(115vh, 100vw, 200vw);
   position: fixed;
   bottom: -100;
   right: 0;
@@ -94,9 +147,15 @@ img.View {
   animation-timeline: scroll();
 }
 @keyframes down-up {
-  0% { bottom: -100%; }
-  75% { bottom: -100%; }
-  100% { bottom: 0%; }
+  0% {
+    bottom: -100%;
+  }
+  75% {
+    bottom: -100%;
+  }
+  100% {
+    bottom: 0%;
+  }
 }
 
 /* SIDEBAR ELEMENTS */
@@ -106,6 +165,22 @@ img.View {
   background-repeat: repeat-y;
   z-index: 2;
   min-height: 100%;
+  animation: sidebar-hide ease-in;
+  animation-timeline: scroll();
+}
+@keyframes sidebar-hide {
+  0% {
+    transform: translateX(0%);
+  }
+  25% {
+    transform: translateX(0%);
+  }
+  35% {
+    transform: translateX(-100%);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
 }
 img.Guy {
   src: "assets/Guy.gif";
@@ -119,9 +194,15 @@ img.Guy {
   animation-timeline: scroll();
 }
 @keyframes move-down {
-  0% { top: 0% }
-  40% { top: 100% }
-  100% { top: 100% }
+  0% {
+    top: 0%;
+  }
+  40% {
+    top: 100%;
+  }
+  100% {
+    top: 100%;
+  }
 }
 
 /* FRONT PAGE ELEMENTS */
@@ -132,7 +213,7 @@ img.Clouds {
   top: 0;
   left: calc(50% + clamp(5vh, 5vw, 5vw));
   transform: translateX(-50%);
-  width: clamp(100vh,90vw,90vw);
+  width: clamp(100vh, 90vw, 90vw);
   z-index: -1;
   animation: scroll-clouds linear;
   animation-timeline: scroll();
@@ -145,7 +226,7 @@ img.Sun {
   /* left: 55%; */
   left: calc(50% + clamp(5vh, 5vw, 5vw));
   transform: translateX(-50%);
-  width: clamp(100vh,90vw,90vw);
+  width: clamp(100vh, 90vw, 90vw);
   z-index: -2;
   animation: scroll-sun linear;
   animation-timeline: scroll();
