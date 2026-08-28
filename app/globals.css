@@ -1,15 +1,9 @@
 /* STYLE CSS */
 
-@property --side-offset {
-  syntax: "<length-percentage>";
-  inherits: true;
-  initial-value: 5vw;
-}
-
 /* GLOBAL ELEMENTS */
 body {
   margin: 0;
-  background: #249fde;
+  background: #64bbdd;
   text-align: center;
   font-size: 100%;
 
@@ -23,6 +17,20 @@ body {
 }
 p {
   margin: 0;
+}
+img,
+.nine-box,
+.Sidebar,
+.BG,
+.Guy,
+.Sun,
+.Clouds,
+.Hill,
+.GuyMed,
+.View {
+  image-rendering: -webkit-optimize-contrast;
+  image-rendering: crisp-edges;
+  image-rendering: pixelated;
 }
 @font-face {
   font-family: BigFont;
@@ -42,41 +50,130 @@ h1 {
   margin-bottom: 5vw;
 }
 
-/* MAIN ELEMENTS */
-.PageGrid {
-  display: grid;
-  /* grid-template-columns: 10% 90%; */
-  grid-template-columns: clamp(min(10vh, 14vw), 10vw, 10vw) 90vw 0vw;
-  --side-offset: clamp(min(5vh, 7vw), 5vw, 5vw);
-  min-height: 220vh;
-  /* animation: sidebar-move ease-in;
-  animation-timeline: scroll(); */
-  animation: page-grid-center ease-in;
+/* BACKGROUND LAYERS */
+.BG {
+  position: fixed;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  background-repeat: no-repeat;
+  background-position: 0 0;
+  background-size: 100% auto;
+  bottom: -100%;
+}
+.BG1 {
+  background-image: url(/assets/BG1.png);
+  z-index: -6;
+  animation: bg1-rise ease-in;
   animation-timeline: scroll();
 }
-/* @keyframes sidebar-move {
-  0% { grid-template-columns: clamp(10vh, 10vw, 10vw) 90vw; }
-  50% { grid-template-columns: clamp(10vh, 10vw, 10vw) 90vw; }
-  60% { grid-template-columns: 0 100vw; }
-  100% { grid-template-columns: 0 100vw; }
-} */
-@keyframes page-grid-center {
+.BG2 {
+  background-image: url(/assets/BG2.png);
+  z-index: -5;
+  animation: bg2-rise ease-in;
+  animation-timeline: scroll();
+}
+.BG3 {
+  background-image: url(/assets/BG3.png);
+  z-index: -4;
+  animation: bg3-rise ease-in;
+  animation-timeline: scroll();
+}
+.BG4 {
+  background-image: url(/assets/BG4.png);
+  z-index: -3;
+  animation: bg4-rise ease-in;
+  animation-timeline: scroll();
+}
+@keyframes bg1-rise {
   0% {
-    grid-template-columns: clamp(min(10vh, 14vw), 10vw, 10vw) 90vw 0vw;
-    --side-offset: clamp(min(5vh, 7vw), 5vw, 5vw);
+    bottom: -100%;
+    background-position-y: 0;
   }
-  30% {
-    grid-template-columns: clamp(min(10vh, 14vw), 10vw, 10vw) 90vw 0vw;
-    --side-offset: clamp(min(5vh, 7vw), 5vw, 5vw);
+  5% {
+    bottom: -100%;
+    background-position-y: 0;
   }
-  50% {
-    grid-template-columns: 5vw 90vw 5vw;
-    --side-offset: 0vw;
+  20% {
+    bottom: 0%;
+    background-position-y: 0;
+  }
+  35% {
+    bottom: 0%;
+    background-position-y: -25vw;
   }
   100% {
-    grid-template-columns: 5vw 90vw 5vw;
-    --side-offset: 0vw;
+    bottom: 0%;
+    background-position-y: -25vw;
   }
+}
+@keyframes bg2-rise {
+  0% {
+    bottom: -100%;
+    background-position-y: 0;
+  }
+  25% {
+    bottom: -100%;
+    background-position-y: 0;
+  }
+  40% {
+    bottom: 0%;
+    background-position-y: 0;
+  }
+  55% {
+    bottom: 0%;
+    background-position-y: -25vw;
+  }
+  100% {
+    bottom: 0%;
+    background-position-y: -25vw;
+  }
+}
+@keyframes bg3-rise {
+  0% {
+    bottom: -100%;
+    background-position-y: 0;
+  }
+  50% {
+    bottom: -100%;
+    background-position-y: 0;
+  }
+  65% {
+    bottom: 0%;
+    background-position-y: 0;
+  }
+  80% {
+    bottom: 0%;
+    background-position-y: -25vw;
+  }
+  100% {
+    bottom: 0%;
+    background-position-y: -25vw;
+  }
+}
+@keyframes bg4-rise {
+  0% {
+    bottom: -100%;
+    background-position-y: 0;
+  }
+  75% {
+    bottom: -100%;
+    background-position-y: 0;
+  }
+  90% {
+    bottom: 0%;
+    background-position-y: 0;
+  }
+  100% {
+    bottom: 0%;
+    background-position-y: -25vw;
+  }
+}
+
+/* MAIN ELEMENTS */
+.PageGrid {
+  position: relative;
+  min-height: 220vh;
 }
 .MidGround {
   z-index: 10;
@@ -87,9 +184,13 @@ h1 {
   animation: up-down ease-in-out;
   animation-timeline: scroll();
 }
-img.Hill {
+.Hill {
   /* width: 100%; */
   width: clamp(min(115vh, 150vw), 100vw, 200vw);
+  aspect-ratio: 2240 / 800;
+  background-image: url(/assets/Hill.png);
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
   z-index: 10;
   position: absolute;
   bottom: -100%;
@@ -112,9 +213,13 @@ img.Hill {
     bottom: -100%;
   }
 }
-img.GuyMed {
+.GuyMed {
   /* width: 100%; */
   width: clamp(min(115vh, 150vw), 100vw, 200vw);
+  aspect-ratio: 2240 / 800;
+  background-image: url(/assets/GuyMed.gif);
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
   z-index: 15;
   position: fixed;
   bottom: -100%;
@@ -146,11 +251,15 @@ img.GuyMed {
 }
 .PageEnd {
 }
-img.View {
+.View {
   z-index: 99;
   /* width: 100%; */
   /* width: 100vw; */
   width: clamp(min(115vh, 150vw), 100vw, 200vw);
+  aspect-ratio: 2240 / 1440;
+  background-image: url(/assets/PageBottom.png);
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
   position: fixed;
   bottom: -100%;
   right: 0;
@@ -174,8 +283,12 @@ img.View {
   background-image: url(/assets/GuyPath.png);
   background-size: 100%;
   background-repeat: repeat-y;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: clamp(min(10vh, 14vw), 10vw, 10vw);
+  height: 100vh;
   z-index: 2;
-  min-height: 100%;
   animation: sidebar-hide ease-in;
   animation-timeline: scroll();
 }
@@ -193,11 +306,14 @@ img.View {
     transform: translateX(-100%);
   }
 }
-img.Guy {
-  src: "assets/Guy.gif";
+.Guy {
+  background-image: url(/assets/Guy.gif);
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
   position: fixed;
   /* width: 5%; */
   width: clamp(min(5vh, 8vw), 5vw, 5vw);
+  aspect-ratio: 1 / 1;
   top: 0%;
   left: 0px;
   z-index: 4;
@@ -218,29 +334,36 @@ img.Guy {
 
 /* FRONT PAGE ELEMENTS */
 .FrontPage {
-  justify-self: center;
   width: 100%;
   max-width: 75rem;
+  margin: 0 auto;
 }
-img.Clouds {
+.Clouds {
   position: fixed;
   top: 0;
-  left: calc(50% + var(--side-offset));
+  left: 50%;
   transform: translateX(-50%);
   width: clamp(min(100vh, 120vw), 90vw, 90vw);
+  aspect-ratio: 256 / 512;
+  background-image: url(/assets/Clouds.png);
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
   z-index: -1;
   animation: scroll-clouds linear;
   animation-timeline: scroll();
 }
-img.Sun {
+.Sun {
   position: fixed;
   top: 0;
   /* right: 0;
   width: 90vw; */
-  /* left: 55%; */
-  left: calc(50% + var(--side-offset));
+  left: 50%;
   transform: translateX(-50%);
   width: clamp(min(100vh, 120vw), 90vw, 90vw);
+  aspect-ratio: 256 / 512;
+  background-image: url(/assets/Sun.png);
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
   z-index: -2;
   animation: scroll-sun linear;
   animation-timeline: scroll();
