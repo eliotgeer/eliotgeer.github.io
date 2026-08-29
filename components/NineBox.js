@@ -1,3 +1,7 @@
-export default function NineBox({ children }) {
-  return <div className="nine-box">{children}</div>;
+export default function NineBox({ id, children }) {
+  return (
+    <div id={id} className="nine-box">
+      {children}
+    </div>
+  );
 }

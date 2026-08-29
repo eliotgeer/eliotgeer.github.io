@@ -6,6 +6,7 @@ body {
   background: #64bbdd;
   text-align: center;
   font-size: 100%;
+  color: #ffffff;
 
   margin-top: 0;
   margin-bottom: 0;
@@ -15,8 +16,48 @@ body {
   overflow-x: clip;
   font-family: BigFont;
 }
+html {
+  scroll-behavior: smooth;
+}
 p {
   margin: 0;
+  font-size: clamp(1.9rem, 1.3rem + 3.4vw, 3.4rem);
+  text-align: justify;
+}
+.Highlight {
+  color: #d74928;
+}
+.Title {
+  font-size: clamp(2.5rem, 1.5rem + 8vw, 6rem);
+  font-weight: bold;
+  margin-top: 0.335em;
+  margin-bottom: 0.335em;
+}
+.FrontPage > .Title {
+  margin-top: calc(var(--menu-w) * 0.08);
+  margin-bottom: 0.5em;
+}
+.Logo {
+  display: block;
+  width: clamp(375px, 75vw, 1050px);
+  aspect-ratio: 2240 / 800;
+  background-image: url(/assets/Logo.png);
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  margin-top: calc(var(--menu-w) * 0.1);
+  margin-bottom: 0.5em;
+  margin-left: auto;
+  margin-right: auto;
+}
+.TextBody {
+  /* margin: 5vw; */
+  /* margin-right: 10vw; */
+  margin-left: 5vw;
+  margin-right: 5vw;
+  padding-bottom: 95vh;
+}
+.nine-box .Title {
+  margin-top: 0.1em;
 }
 img,
 .nine-box,
@@ -26,7 +67,8 @@ img,
 .Sun,
 .Clouds,
 .Hill,
-.GuyMed,
+.guy,
+.Logo,
 .View {
   image-rendering: -webkit-optimize-contrast;
   image-rendering: crisp-edges;
@@ -39,15 +81,80 @@ img,
 /* .big {
   font-family: BigFont;
 } */
-h1 {
-  font-size: clamp(1.75rem, 5vw, 4rem);
-  font-weight: bold;
+:root {
+  --box-pad: clamp(20px, 8vw, 80px);
 }
 .nine-box {
-  border-image: url(/assets/NineBox.png) 80 80 80 80 fill / 40px 40px 40px 40px;
-  padding: clamp(20px, 8vw, 80px);
+  border-image-source: url(/assets/Box.png);
+  border-image-slice: 80 80 80 80 fill;
+  border-image-width: clamp(24px, 6vw, 40px);
+  padding: var(--box-pad);
   margin-top: 5vw;
   margin-bottom: 5vw;
+}
+.AboutContent {
+  display: flex;
+  align-items: center;
+  gap: clamp(16px, 4vw, 40px);
+  text-align: left;
+}
+.Headshot {
+  width: clamp(120px, 25vw, 220px);
+  aspect-ratio: 2702 / 3603;
+  flex-shrink: 0;
+  background-image: url(/assets/Headshot.jpg);
+  background-size: cover;
+  background-position: center;
+  border-radius: 20px;
+  border: clamp(3px, 0.8vw, 6px) solid #ffffff;
+  box-sizing: border-box;
+}
+.AboutText {
+  flex: 1;
+  text-align: center;
+  margin-right: var(--box-pad);
+}
+@media (max-width: 600px) {
+  .AboutContent {
+    flex-direction: column;
+    text-align: center;
+  }
+  .AboutText {
+    margin-right: 0;
+  }
+  .Headshot {
+    width: min(320px, 80vw);
+    aspect-ratio: 3 / 2;
+    background-position: center 20%;
+  }
+}
+.ContactLinks {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: clamp(16px, 4vw, 40px);
+  margin-top: clamp(16px, 4vw, 32px);
+}
+.LinkedinIcon,
+.MailIcon {
+  width: clamp(32px, 8vw, 56px);
+  aspect-ratio: 1 / 1;
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  image-rendering: -webkit-optimize-contrast;
+  image-rendering: crisp-edges;
+  image-rendering: pixelated;
+  transition: opacity 0.15s ease;
+}
+.ContactLinks a:hover .LinkedinIcon,
+.ContactLinks a:hover .MailIcon {
+  opacity: 0.7;
+}
+.LinkedinIcon {
+  background-image: url(/assets/Linkedin.png);
+}
+.MailIcon {
+  background-image: url(/assets/Mail.png);
 }
 
 /* BACKGROUND LAYERS */
@@ -170,6 +277,69 @@ h1 {
   }
 }
 
+/* MENU */
+:root {
+  --menu-w: clamp(min(140vh, 400vw), 100vw, 100vw);
+  --sidebar-w: clamp(min(10vh, 14vw), 10vw, 10vw);
+}
+.Menu {
+  position: fixed;
+  top: calc(var(--menu-w) * -0.04911);
+  left: 50%;
+  transform: translateX(-50%);
+  width: var(--menu-w);
+  aspect-ratio: 2240 / 800;
+  background-image: url(/assets/Menu.png);
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  image-rendering: -webkit-optimize-contrast;
+  image-rendering: crisp-edges;
+  image-rendering: pixelated;
+  z-index: 50;
+  animation: menu-hide ease-in;
+  animation-timeline: scroll();
+}
+@keyframes menu-hide {
+  0% {
+    opacity: 1;
+    pointer-events: auto;
+  }
+  3% {
+    opacity: 0;
+    pointer-events: none;
+  }
+  100% {
+    opacity: 0;
+    pointer-events: none;
+  }
+}
+.MenuLinks {
+  position: fixed;
+  top: 0;
+  height: calc(var(--menu-w) * 0.0491);
+  right: calc(var(--menu-w) * 0.018);
+  max-width: calc(95vw - var(--sidebar-w));
+  z-index: 52;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+  align-items: center;
+  align-content: center;
+  gap: 0.5vw 2vw;
+  animation: menu-hide ease-in;
+  animation-timeline: scroll();
+}
+.MenuLinks p {
+  margin: 0;
+  text-align: right;
+  font-size: clamp(1.7rem, 4.2vw, 2.5rem);
+}
+.MenuLinks a {
+  color: #ffffff;
+  text-decoration: none;
+}
+
 /* MAIN ELEMENTS */
 .PageGrid {
   position: relative;
@@ -200,13 +370,13 @@ h1 {
   0% {
     bottom: -100%;
   }
-  30% {
+  75% {
     bottom: -100%;
   }
-  60% {
+  85% {
     bottom: 0%;
   }
-  90% {
+  95% {
     bottom: -100%;
   }
   100% {
@@ -232,15 +402,15 @@ h1 {
     bottom: -100%;
     left: -10vw;
   }
-  30% {
+  75% {
     bottom: -100%;
     left: -10vw;
   }
-  60% {
+  85% {
     bottom: 0%;
     left: 2vw;
   }
-  90% {
+  95% {
     bottom: -300%;
     left: 90vw;
   }
@@ -257,21 +427,21 @@ h1 {
   /* width: 100vw; */
   width: clamp(min(115vh, 150vw), 100vw, 200vw);
   aspect-ratio: 2240 / 1440;
-  background-image: url(/assets/PageBottom.png);
+  background-image: url(/assets/Bottom.png);
   background-repeat: no-repeat;
   background-size: 100% 100%;
   position: fixed;
-  bottom: -100%;
+  bottom: -130%;
   right: 0;
   animation: down-up linear;
   animation-timeline: scroll();
 }
 @keyframes down-up {
   0% {
-    bottom: -100%;
+    bottom: -130%;
   }
   75% {
-    bottom: -100%;
+    bottom: -130%;
   }
   100% {
     bottom: 0%;
@@ -280,13 +450,13 @@ h1 {
 
 /* SIDEBAR ELEMENTS */
 .Sidebar {
-  background-image: url(/assets/GuyPath.png);
+  background-image: url(/assets/Sidebar.png);
   background-size: 100%;
   background-repeat: repeat-y;
   position: fixed;
   top: 0;
   left: 0;
-  width: clamp(min(10vh, 14vw), 10vw, 10vw);
+  width: var(--sidebar-w);
   height: 100vh;
   z-index: 2;
   animation: sidebar-hide ease-in;
@@ -296,10 +466,10 @@ h1 {
   0% {
     transform: translateX(0%);
   }
-  25% {
+  65% {
     transform: translateX(0%);
   }
-  35% {
+  75% {
     transform: translateX(-100%);
   }
   100% {
@@ -324,7 +494,7 @@ h1 {
   0% {
     top: 0%;
   }
-  40% {
+  65% {
     top: 100%;
   }
   100% {
@@ -379,10 +549,6 @@ h1 {
   }
 }
 
-.TextBody {
-  /* margin: 5vw; */
-  font-size: clamp(1rem, 0.6rem + 1.8vw, 1.75rem);
-  /* margin-right: 10vw; */
-  margin-left: 5vw;
-  margin-right: 5vw;
+.Logo {
+  background-image: url(/assets/Logo.png);
 }
