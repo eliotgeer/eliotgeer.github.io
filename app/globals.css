@@ -317,6 +317,7 @@ img,
   user-select: none;
   animation: menu-hide ease-in;
   animation-timeline: scroll();
+  transition: opacity 0.3s ease;
 }
 @media (max-width: 600px) {
   .ReducedMotionLabel {
@@ -333,10 +334,13 @@ img,
 .ReducedMotionToggle:checked ~ .Menu,
 .ReducedMotionToggle:checked ~ .MenuBar .MenuLinks,
 .ReducedMotionToggle:checked ~ .PageGrid .Sidebar,
-.ReducedMotionToggle:checked ~ .PageGrid .Guy,
+.ReducedMotionToggle:checked ~ .PageGrid .Guy {
+  animation-play-state: paused !important;
+}
 .ReducedMotionToggle:checked ~ .PageGrid .Sun,
 .ReducedMotionToggle:checked ~ .PageGrid .Clouds {
-  animation-play-state: paused !important;
+  animation: none !important;
+  top: 0 !important;
 }
 .ReducedMotionToggle:checked ~ .BG1,
 .ReducedMotionToggle:checked ~ .BG2,
@@ -359,6 +363,21 @@ img,
 .ReducedMotionToggle:checked ~ .MenuBar .ReducedMotionLabel {
   animation: none !important;
   opacity: 1 !important;
+  pointer-events: auto !important;
+}
+@keyframes menu-reveal {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+body.ScrollingUp .Menu,
+body.ScrollingUp .MenuBar .MenuLinks,
+body.ScrollingUp .MenuBar .ReducedMotionLabel {
+  animation: menu-reveal 0.3s ease forwards;
+  animation-timeline: auto;
   pointer-events: auto !important;
 }
 .ReducedMotionToggle:checked ~ .PageGrid {
@@ -389,6 +408,7 @@ img,
   z-index: 50;
   animation: menu-hide ease-in;
   animation-timeline: scroll();
+  transition: opacity 0.3s ease;
 }
 @keyframes menu-hide {
   0% {
@@ -428,6 +448,7 @@ img,
   gap: 0.5vw 2vw;
   animation: menu-hide ease-in;
   animation-timeline: scroll();
+  transition: opacity 0.3s ease;
 }
 .MenuLinks p {
   margin: 0;

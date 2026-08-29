@@ -1,9 +1,11 @@
 import Link from "next/link";
 import NineBox from "../components/NineBox";
+import ScrollDirection from "../components/ScrollDirection";
 
 export default function Home() {
   return (
     <>
+      <ScrollDirection />
       <input
         type="checkbox"
         id="reduced-motion"
@@ -16,7 +18,7 @@ export default function Home() {
       <div className="Menu" />
       <nav className="MenuBar">
         <label htmlFor="reduced-motion" className="ReducedMotionLabel">
-          reduced motion
+          Reduce Motion
         </label>
         <div className="MenuLinks">
           <p>
