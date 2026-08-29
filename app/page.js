@@ -4,24 +4,34 @@ import NineBox from "../components/NineBox";
 export default function Home() {
   return (
     <>
+      <input
+        type="checkbox"
+        id="reduced-motion"
+        className="ReducedMotionToggle"
+      />
       <div className="BG BG1" />
       <div className="BG BG2" />
       <div className="BG BG3" />
       <div className="BG BG4" />
       <div className="Menu" />
-      <nav className="MenuLinks">
-        <p>
-          <a href="#about">About</a>
-        </p>
-        <p>
-          <a href="#skills">Skills / Experience</a>
-        </p>
-        <p>
-          <a href="#portfolio">Portfolio</a>
-        </p>
-        <p>
-          <a href="#contact">Contact</a>
-        </p>
+      <nav className="MenuBar">
+        <label htmlFor="reduced-motion" className="ReducedMotionLabel">
+          reduced motion
+        </label>
+        <div className="MenuLinks">
+          <p>
+            <a href="#about">About</a>
+          </p>
+          <p>
+            <a href="#skills">Skills / Experience</a>
+          </p>
+          <p>
+            <a href="#portfolio">Portfolio</a>
+          </p>
+          <p>
+            <a href="#contact">Contact</a>
+          </p>
+        </div>
       </nav>
       <div className="PageGrid">
         <div className="Sidebar">
@@ -56,16 +66,31 @@ export default function Home() {
             </NineBox>
             <NineBox id="skills">
               <h1 className="Title">Skills / Experience</h1>
-              <p>Game Development</p>
-              <p>© A, A, A</p>
-              <p>Nine box test hellow text hello</p>
-              <p>Nine box test hellow text hello</p>
+              <div className="SkillsList">
+                <p className="SkillRow">
+                  <span className="SkillCategory">Technical:</span> Java,
+                  JavaFX, Python, TypeScript w/ React, Godot (GD Script, GL
+                  Shading Language), Lean
+                </p>
+                <p className="SkillRow">
+                  <span className="SkillCategory">Artistic:</span> Adobe
+                  Illustrator, Adobe Premiere Pro, Autodesk Sketchbook,
+                  Autodesk Maya, ProCreate, Twine Harlowe
+                </p>
+                <p className="SkillRow">
+                  <span className="SkillCategory">Organizational:</span>{" "}
+                  Google Suite, R Studio, Overleaf (LaTeX)
+                </p>
+              </div>
             </NineBox>
             <NineBox id="portfolio">
               <h1 className="Title">Portfolio</h1>
               <p>Nine box test hellow text hello</p>
               <p>Nine box test hellow text hello</p>
               <p>Nine box test hellow text hello</p>
+              <div className="SeeMore">
+                <Link href="/portfolio/">See more...</Link>
+              </div>
             </NineBox>
             <NineBox id="contact">
               <h1 className="Title">Contact</h1>

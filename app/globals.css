@@ -25,7 +25,7 @@ p {
   text-align: justify;
 }
 .Highlight {
-  color: #d74928;
+  color: var(--highlight);
 }
 .Title {
   font-size: clamp(2.5rem, 1.5rem + 8vw, 6rem);
@@ -83,6 +83,7 @@ img,
 } */
 :root {
   --box-pad: clamp(20px, 8vw, 80px);
+  --highlight: #d74928;
 }
 .nine-box {
   border-image-source: url(/assets/Box.png);
@@ -127,6 +128,29 @@ img,
     aspect-ratio: 3 / 2;
     background-position: center 20%;
   }
+}
+.SkillsList {
+  margin-top: clamp(16px, 3vw, 32px);
+}
+.SkillRow {
+  text-align: left;
+  padding: clamp(12px, 2.5vw, 24px) 0;
+}
+.SkillRow + .SkillRow {
+  border-top: 2px solid #ffffff;
+}
+.SkillCategory {
+  font-weight: bold;
+  color: var(--highlight);
+}
+.SeeMore {
+  text-align: right;
+  margin-top: clamp(12px, 3vw, 24px);
+}
+.SeeMore a {
+  color: #ffffff;
+  text-decoration: none;
+  font-size: clamp(1.7rem, 4.2vw, 2.5rem);
 }
 .ContactLinks {
   display: flex;
@@ -277,6 +301,73 @@ img,
   }
 }
 
+/* REDUCED MOTION TOGGLE */
+.ReducedMotionToggle {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  opacity: 0;
+  pointer-events: none;
+}
+.ReducedMotionLabel {
+  flex-shrink: 0;
+  color: #ffffff;
+  font-size: clamp(1.7rem, 4.2vw, 2.5rem);
+  cursor: pointer;
+  user-select: none;
+  animation: menu-hide ease-in;
+  animation-timeline: scroll();
+}
+@media (max-width: 600px) {
+  .ReducedMotionLabel {
+    font-size: 0.85rem;
+  }
+}
+.ReducedMotionToggle:checked ~ .MenuBar .ReducedMotionLabel {
+  color: var(--highlight);
+}
+.ReducedMotionToggle:checked ~ .BG1,
+.ReducedMotionToggle:checked ~ .BG2,
+.ReducedMotionToggle:checked ~ .BG3,
+.ReducedMotionToggle:checked ~ .BG4,
+.ReducedMotionToggle:checked ~ .Menu,
+.ReducedMotionToggle:checked ~ .MenuBar .MenuLinks,
+.ReducedMotionToggle:checked ~ .PageGrid .Sidebar,
+.ReducedMotionToggle:checked ~ .PageGrid .Guy,
+.ReducedMotionToggle:checked ~ .PageGrid .Sun,
+.ReducedMotionToggle:checked ~ .PageGrid .Clouds {
+  animation-play-state: paused !important;
+}
+.ReducedMotionToggle:checked ~ .BG1,
+.ReducedMotionToggle:checked ~ .BG2,
+.ReducedMotionToggle:checked ~ .BG3,
+.ReducedMotionToggle:checked ~ .BG4,
+.ReducedMotionToggle:checked ~ .PageGrid .Sidebar {
+  display: none;
+}
+.ReducedMotionToggle:checked ~ .MidGround,
+.ReducedMotionToggle:checked ~ .MidGround .GuyMed {
+  animation: none !important;
+  bottom: -100% !important;
+}
+.ReducedMotionToggle:checked ~ .PageEnd .View {
+  animation: none !important;
+  bottom: -130% !important;
+}
+.ReducedMotionToggle:checked ~ .Menu,
+.ReducedMotionToggle:checked ~ .MenuBar .MenuLinks,
+.ReducedMotionToggle:checked ~ .MenuBar .ReducedMotionLabel {
+  animation: none !important;
+  opacity: 1 !important;
+  pointer-events: auto !important;
+}
+.ReducedMotionToggle:checked ~ .PageGrid {
+  min-height: 0;
+}
+.ReducedMotionToggle:checked ~ .PageGrid .TextBody {
+  padding-bottom: 10vh;
+}
+
 /* MENU */
 :root {
   --menu-w: clamp(min(140vh, 400vw), 100vw, 100vw);
@@ -313,13 +404,21 @@ img,
     pointer-events: none;
   }
 }
-.MenuLinks {
+.MenuBar {
   position: fixed;
   top: 0;
-  height: calc(var(--menu-w) * 0.0491);
-  right: calc(var(--menu-w) * 0.018);
-  max-width: calc(95vw - var(--sidebar-w));
+  left: var(--sidebar-w);
+  right: 0;
+  min-height: calc(var(--menu-w) * 0.0491);
   z-index: 52;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1vw;
+  padding: 0 calc(var(--menu-w) * 0.018);
+  box-sizing: border-box;
+}
+.MenuLinks {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
@@ -335,9 +434,17 @@ img,
   text-align: right;
   font-size: clamp(1.7rem, 4.2vw, 2.5rem);
 }
+@media (max-width: 360px) {
+  .MenuLinks p {
+    font-size: 1.3rem;
+  }
+}
 .MenuLinks a {
   color: #ffffff;
   text-decoration: none;
+}
+a:hover {
+  color: var(--highlight);
 }
 
 /* MAIN ELEMENTS */
@@ -493,6 +600,24 @@ img,
 @keyframes move-down {
   0% {
     top: 0%;
+  }
+  16% {
+    top: 25%;
+  }
+  19% {
+    top: 25%;
+  }
+  32% {
+    top: 50%;
+  }
+  34% {
+    top: 50%;
+  }
+  48% {
+    top: 75%;
+  }
+  50% {
+    top: 75%;
   }
   65% {
     top: 100%;
