@@ -1,7 +1,20 @@
 import Link from "next/link";
 import GuySidebar from "../components/GuySidebar";
 import NineBox from "../components/NineBox";
+import PortfolioSlideshow from "../components/PortfolioSlideshow";
 import ScrollDirection from "../components/ScrollDirection";
+
+const PORTFOLIO_SLIDES = [
+  { image: "/assets/BugKidSequence.gif", title: "Bug Kid Game Dev" },
+  { image: "/assets/GitHappens.png", title: "Git Happens" },
+  { image: "/assets/BakeryBreakdownSequence.gif", title: "Bakery Breakdown" },
+  { image: "/assets/LilyPadParkSequence.gif", title: "LilyPad Park" },
+  { image: "/assets/EscapeARTistsSequence.gif", title: "Escape ARTists" },
+  { image: "/assets/DIRTYCOMPUTERSequence.gif", title: "DIRTY COMPUTER" },
+  { image: "/assets/ZombieboySequence.gif", title: "Zombieboy" },
+  { image: "/assets/musicalforum.jpeg", title: "Brown Musical Forum" },
+  { image: "/assets/MITMH.PNG", title: "MIT Mystery Hunt" },
+];
 
 export default function Home() {
   return (
@@ -111,9 +124,7 @@ export default function Home() {
             </NineBox>
             <NineBox id="portfolio">
               <h1 className="Title">Portfolio</h1>
-              <p>Nine box test hellow text hello</p>
-              <p>Nine box test hellow text hello</p>
-              <p>Nine box test hellow text hello</p>
+              <PortfolioSlideshow slides={PORTFOLIO_SLIDES} />
               <div className="SeeMore">
                 <Link href="/portfolio/">See More -{">"}</Link>
               </div>

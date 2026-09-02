@@ -153,6 +153,41 @@ img,
 .SkillsList {
   margin-top: clamp(16px, 3vw, 32px);
 }
+.PortfolioSlideshow {
+  display: flex;
+  justify-content: center;
+  margin-top: clamp(16px, 3vw, 32px);
+}
+.SlideshowViewport {
+  position: relative;
+  width: clamp(240px, 60vw, 480px);
+  height: calc(clamp(240px, 60vw, 480px) + 2.6rem);
+  overflow: hidden;
+}
+.SlideshowFigure {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: clamp(4px, 0.8vw, 10px);
+  transition: transform 0.25s ease;
+}
+.SlideshowFigure img {
+  display: block;
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  object-fit: cover;
+  border-radius: 10px;
+}
+.SlideshowFigure figcaption {
+  font-size: clamp(1.4rem, 1.1rem + 1.2vw, 1.9rem);
+  font-weight: bold;
+  text-align: center;
+}
 .StatsRow {
   display: flex;
   flex-direction: row;
