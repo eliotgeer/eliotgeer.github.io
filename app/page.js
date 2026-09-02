@@ -1,4 +1,5 @@
 import Link from "next/link";
+import GuySidebar from "../components/GuySidebar";
 import NineBox from "../components/NineBox";
 import ScrollDirection from "../components/ScrollDirection";
 
@@ -25,7 +26,10 @@ export default function Home() {
             <a href="#about">About</a>
           </p>
           <p>
-            <a href="#skills">Skills / Experience</a>
+            <a href="#skills">Skills</a>
+          </p>
+          <p>
+            <a href="#experience">Experience</a>
           </p>
           <p>
             <a href="#portfolio">Portfolio</a>
@@ -37,7 +41,7 @@ export default function Home() {
       </nav>
       <div className="PageGrid">
         <div className="Sidebar">
-          <div className="Guy" />
+          <GuySidebar />
         </div>
         <div className="FrontPage">
           <div className="Sun" />
@@ -67,7 +71,7 @@ export default function Home() {
               </div>
             </NineBox>
             <NineBox id="skills">
-              <h1 className="Title">Skills / Experience</h1>
+              <h1 className="Title">Skills</h1>
               <div className="SkillsList">
                 <p className="SkillRow">
                   <span className="SkillCategory">Technical:</span> Java,
@@ -76,13 +80,33 @@ export default function Home() {
                 </p>
                 <p className="SkillRow">
                   <span className="SkillCategory">Artistic:</span> Adobe
-                  Illustrator, Adobe Premiere Pro, Autodesk Sketchbook,
-                  Autodesk Maya, ProCreate, Twine Harlowe
+                  Illustrator, Adobe Premiere Pro, Autodesk Sketchbook, Autodesk
+                  Maya, ProCreate, Twine
                 </p>
                 <p className="SkillRow">
-                  <span className="SkillCategory">Organizational:</span>{" "}
-                  Google Suite, R Studio, Overleaf (LaTeX)
+                  <span className="SkillCategory">Organizational:</span> Google
+                  Suite, R Studio, Overleaf (LaTeX)
                 </p>
+              </div>
+            </NineBox>
+            <NineBox id="experience">
+              <h1 className="Title">Experience</h1>
+              <div className="StatsRow">
+                <div className="StatItem">
+                  <span className="StatNumber">3 YEARS</span>
+                  <span className="StatLabel">of Game Development and Engine Experience</span>
+                </div>
+                <div className="StatItem">
+                  <span className="StatNumber">90+ HOURS</span>
+                  <span className="StatLabel">of Social Media / E-Commerce Marketing Research</span>
+                </div>
+                <div className="StatItem">
+                  <span className="StatNumber">100+ MAILING LIST SIGNUPS</span>
+                  <span className="StatLabel">for Brown Music Review Student Organization</span>
+                </div>
+              </div>
+              <div className="SeeMore">
+                <Link href="/experience/">See More -{">"}</Link>
               </div>
             </NineBox>
             <NineBox id="portfolio">
@@ -91,14 +115,12 @@ export default function Home() {
               <p>Nine box test hellow text hello</p>
               <p>Nine box test hellow text hello</p>
               <div className="SeeMore">
-                <Link href="/portfolio/">See more...</Link>
+                <Link href="/portfolio/">See More -{">"}</Link>
               </div>
             </NineBox>
             <NineBox id="contact">
               <h1 className="Title">Contact</h1>
-              <p>Nine box test hellow text hello</p>
-              <p>Nine box test hellow text hello</p>
-              <p>Nine box test hellow text hello</p>
+              <p style={{ textAlign: "center" }}>Get in touch with me!</p>
               <div className="ContactLinks">
                 <a
                   href="https://www.linkedin.com/in/eliot-geer/"
