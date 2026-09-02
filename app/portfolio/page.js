@@ -23,7 +23,7 @@ export default function Portfolio() {
           <h1 className="Title">CS + Game Development</h1>
           <div className="ProjectList">
             <ProjectCard
-              image="/assets/BugKidSequence.gif"
+              image="/assets/BugKidSequenceMini.gif"
               thumbnail="/assets/bugkidicon.jpg"
               title="Bug Kid Game Dev"
             >
@@ -100,7 +100,7 @@ export default function Portfolio() {
               </p>
             </ProjectCard>
             <ProjectCard
-              image="/assets/BakeryBreakdownSequence.gif"
+              image="/assets/BakeryBreakdownSequenceMini.gif"
               title="Bakery Breakdown"
             >
               <p>

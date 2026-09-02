@@ -2,62 +2,37 @@
 
 import { useEffect, useState } from "react";
 
-export default function PortfolioSlideshow({ slides, interval = 2000 }) {
-  const [current, setCurrent] = useState(0);
-  const [next, setNext] = useState(null);
-  const [sliding, setSliding] = useState(false);
+const FADE_MS = 900;
+
+export default function PortfolioSlideshow({ slides, interval = 7000 }) {
+  const [index, setIndex] = useState(0);
+  const [visible, setVisible] = useState(true);
 
   useEffect(() => {
-    const startTimer = setTimeout(() => {
-      const nextIndex = (current + 1) % slides.length;
-      setNext(nextIndex);
-
-      const slideTimer = requestAnimationFrame(() => {
-        requestAnimationFrame(() => setSliding(true));
-      });
-
-      const endTimer = setTimeout(() => {
-        setCurrent(nextIndex);
-        setNext(null);
-        setSliding(false);
-      }, 250);
-
-      return () => {
-        cancelAnimationFrame(slideTimer);
-        clearTimeout(endTimer);
-      };
+    const timer = setInterval(() => {
+      setVisible(false);
+      setTimeout(() => {
+        setIndex((i) => (i + 1) % slides.length);
+        setVisible(true);
+      }, FADE_MS);
     }, interval);
+    return () => clearInterval(timer);
+  }, [slides.length, interval]);
 
-    return () => clearTimeout(startTimer);
-  }, [current, slides.length, interval]);
-
-  const currentSlide = slides[current];
-  const nextSlide = next !== null ? slides[next] : null;
+  const slide = slides[index];
 
   return (
     <div className="PortfolioSlideshow">
-      <div className="SlideshowViewport">
-        <figure
-          className="SlideshowFigure"
-          style={{
-            transform: sliding ? "translateX(-100%)" : "translateX(0%)",
-          }}
-        >
-          <img src={currentSlide.image} alt={currentSlide.title} />
-          <figcaption>{currentSlide.title}</figcaption>
-        </figure>
-        {nextSlide && (
-          <figure
-            className="SlideshowFigure"
-            style={{
-              transform: sliding ? "translateX(0%)" : "translateX(100%)",
-            }}
-          >
-            <img src={nextSlide.image} alt={nextSlide.title} />
-            <figcaption>{nextSlide.title}</figcaption>
-          </figure>
-        )}
-      </div>
+      <figure
+        className="SlideshowFigure"
+        style={{
+          opacity: visible ? 1 : 0,
+          transition: `opacity ${FADE_MS}ms ease`,
+        }}
+      >
+        <img src={slide.image} alt={slide.title} />
+        <figcaption>{slide.title}</figcaption>
+      </figure>
     </div>
   );
 }
