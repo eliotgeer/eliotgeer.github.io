@@ -27,7 +27,11 @@ export default function Portfolio() {
               thumbnail="/assets/bugkidicon.jpg"
               title="Bug Kid Game Dev"
             >
-              <p>A</p>
+              <p>© An ongoing solo game development and marketing project</p>
+              <p>
+                © Created in Godot3D using a pixel-perfect color-snapped light
+                rendering pipeline
+              </p>
               <div className="TweetRow" suppressHydrationWarning>
                 <div className="TweetItem">
                   <blockquote className="twitter-tweet">
@@ -75,6 +79,7 @@ export default function Portfolio() {
                     </a>
                   </blockquote>
                 </div>
+                <p>© Generated 66k+ impressions within 3 weeks</p>
               </div>
               <Script
                 src="https://platform.x.com/widgets.js"
@@ -215,7 +220,9 @@ export default function Portfolio() {
                 src="/assets/MysteryHeist.JPG"
                 alt="MIT Mystery Hunt"
               />
-              <p>© Promotional logos, designs, and assets for MIT Mystery Hunt</p>
+              <p>
+                © Promotional logos, designs, and assets for MIT Mystery Hunt
+              </p>
               <p>© Created in Autodesk Sketchbook</p>
             </ProjectCard>
           </div>
