@@ -103,19 +103,19 @@ export default function Experience() {
               </p>
               <div className="SubstackEmbed">
                 <iframe
-                  src="https://brownmusicreview.substack.com/embed"
-                  title="Brown Music Review Substack"
+                  src="https://www.brownmusicreview.com"
+                  title="Brown Music Review Website"
                   frameBorder="0"
                   scrolling="no"
                 />
               </div>
               <p className="SeeMore">
                 <a
-                  href="https://brownmusicreview.substack.com?utm_source=navbar&utm_medium=web"
+                  href="https://www.brownmusicreview.com"
                   target="_blank"
                   rel="noopener noreferrer"
                 >
-                  Read on Substack
+                  ~ See The Website! ~
                 </a>
               </p>
             </ProjectCard>
@@ -123,10 +123,26 @@ export default function Experience() {
               image="/assets/Brown.png"
               title="CSCI1920N: 2D Game Engines (Head TA)"
             >
-              <p>© Contributing to course development</p>
               <p>
-                © Serving as one of two lecturers for an advanced computer
-                science course
+                © One of two primary lecturers of a student-taught and led
+                course
+              </p>
+              <p>© Managed course logistics, course website, and lecture materials in addition to standard TA procedures {"(grading, student support)"}</p>
+              <p>
+                © Conceptualized and introduced a new assignment to the existing course
+                curriculum
+              </p>
+              <p>
+                © Contributed 100+ hours of work
+              </p>
+              <p className="SeeMore">
+                <a
+                  href="https://browncsci1950n.github.io"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  ~ See Course Website ~
+                </a>
               </p>
             </ProjectCard>
           </div>
@@ -155,7 +171,7 @@ export default function Experience() {
                   target="_blank"
                   rel="noopener noreferrer"
                 >
-                  View on Penguin Random House
+                  ~ View on Penguin Random House ~
                 </a>
               </p>
             </ProjectCard>
@@ -185,7 +201,7 @@ export default function Experience() {
                   target="_blank"
                   rel="noopener noreferrer"
                 >
-                  Open PDF in New Tab
+                  ~ Open PDF in New Tab ~
                 </a>
               </p>
             </ProjectCard>
@@ -232,7 +248,10 @@ export default function Experience() {
               image="/assets/bos.jpg"
               title="Rumor Has It (Production Designer)"
             >
-              <p>© Managed and coordinated the purchase and creation of necessary props and supplies</p>
+              <p>
+                © Managed and coordinated the purchase and creation of necessary
+                props and supplies
+              </p>
               <p>© Developed digital assets for the post-production process</p>
             </ProjectCard>
           </div>

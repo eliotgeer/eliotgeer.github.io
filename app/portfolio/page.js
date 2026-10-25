@@ -20,7 +20,7 @@ export default function Portfolio() {
       <div className="TextBody SubPageBody">
         <h1 className="Title">Portfolio</h1>
         <NineBox id="cs-gamedev">
-          <h1 className="Title">CS + Game Development</h1>
+          <h1 className="Title">Software + Game Development</h1>
           <div className="ProjectList">
             <ProjectCard
               image="/assets/BugKidSequenceMini.gif"
@@ -137,6 +137,53 @@ export default function Portfolio() {
             </ProjectCard>
           </div>
         </NineBox>
+        <NineBox id="research-marketing">
+          <h1 className="Title">Marketing + 2D Design</h1>
+          <div className="ProjectList">
+            <ProjectCard image="/assets/MITMH.PNG" title="MIT Mystery Hunt">
+              <img
+                className="DetailImage"
+                src="/assets/MysteryHeist.JPG"
+                alt="MIT Mystery Hunt"
+              />
+              <p>
+                © Promotional logos, designs, and assets for MIT Mystery Hunt
+                2025
+              </p>
+              <p>© Created in Autodesk Sketchbook</p>
+              <p className="SeeMore">
+                <a
+                  href="https://mitmysteryheist.com"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  ~ Event Site ~
+                </a>
+              </p>
+              <p className="SeeMore">
+                <a
+                  href="https://en.wikipedia.org/wiki/MIT_Mystery_Hunt"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  ~ Event Background ~
+                </a>
+              </p>
+            </ProjectCard>
+            <ProjectCard
+              image="/assets/musicalforum.jpeg"
+              title="Brown Musical Forum"
+            >
+              <img
+                className="DetailImage"
+                src="/assets/Company.PNG"
+                alt="Brown Musical Forum"
+              />
+              <p>© Promotional assets for Brown Musical Forum</p>
+              <p>© Created in Adobe Illustrator and Autodesk Sketchbook</p>
+            </ProjectCard>
+          </div>
+        </NineBox>
         <NineBox id="animation-film">
           <h1 className="Title">Animation + Film</h1>
           <div className="ProjectList">
@@ -194,36 +241,6 @@ export default function Portfolio() {
                 Making as an animation study
               </p>
               <p>© Animated in Aseprite and edited in Premiere Pro</p>
-            </ProjectCard>
-          </div>
-        </NineBox>
-        <NineBox id="research-marketing">
-          <h1 className="Title">Marketing</h1>
-          <div className="ProjectList">
-            <ProjectCard
-              image="/assets/musicalforum.jpeg"
-              title="Brown Musical Forum"
-            >
-              <img
-                className="DetailImage"
-                src="/assets/Company.PNG"
-                alt="Brown Musical Forum"
-              />
-              <p>© Promotional assets for Brown Musical Forum</p>
-              <p>© Created in Adobe Illustrator and Autodesk Sketchbook</p>
-            </ProjectCard>
-          </div>
-          <div className="ProjectList">
-            <ProjectCard image="/assets/MITMH.PNG" title="MIT Mystery Hunt">
-              <img
-                className="DetailImage"
-                src="/assets/MysteryHeist.JPG"
-                alt="MIT Mystery Hunt"
-              />
-              <p>
-                © Promotional logos, designs, and assets for MIT Mystery Hunt
-              </p>
-              <p>© Created in Autodesk Sketchbook</p>
             </ProjectCard>
           </div>
         </NineBox>

@@ -79,6 +79,20 @@ export default function Home() {
                   </p>
                 </div>
               </div>
+              <NineBox id="resume">
+                <br></br>
+                <p className="ResumeLink">
+                  <a
+                    href="https://docs.google.com/document/d/e/2PACX-1vRva8bsBZ6Jo-C-4V3P8k-Fk9b5YLKiBNksnBMIXYN2shBWz5D1NyaQyc1bPStlAj-2l18kWnjgChBe/pub"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    <br></br>~ RESUME ~<br></br>
+                    <br></br>
+                  </a>
+                </p>
+                <br></br>
+              </NineBox>
             </NineBox>
             <NineBox id="skills">
               <h1 className="Title">Skills</h1>
@@ -104,15 +118,21 @@ export default function Home() {
               <div className="StatsRow">
                 <div className="StatItem">
                   <span className="StatNumber">3 YEARS</span>
-                  <span className="StatLabel">of Game Development and Engine Experience</span>
+                  <span className="StatLabel">
+                    of Game Development and Engine Experience
+                  </span>
                 </div>
                 <div className="StatItem">
                   <span className="StatNumber">90+ HOURS</span>
-                  <span className="StatLabel">of Social Media / E-Commerce Marketing Research</span>
+                  <span className="StatLabel">
+                    of Social Media / E-Commerce Marketing Research
+                  </span>
                 </div>
                 <div className="StatItem">
                   <span className="StatNumber">100+ MAILING LIST SIGNUPS</span>
-                  <span className="StatLabel">for Brown Music Review Student Organization</span>
+                  <span className="StatLabel">
+                    for Brown Music Review Student Organization
+                  </span>
                 </div>
               </div>
               <div className="SeeMore">

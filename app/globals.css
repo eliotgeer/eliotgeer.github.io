@@ -54,7 +54,7 @@ p {
   /* margin-right: 10vw; */
   margin-left: 5vw;
   margin-right: 5vw;
-  padding-bottom: 95vh;
+  padding-bottom: 8vh;
 }
 .SubPageBody {
   padding-top: calc(var(--menu-w) * 0.0491 + 8vh);
@@ -113,6 +113,7 @@ img,
   padding: var(--box-pad);
   margin-top: 5vw;
   margin-bottom: 5vw;
+  transform: translateZ(0);
 }
 .AboutContent {
   display: flex;
@@ -341,7 +342,7 @@ img,
 }
 .PdfEmbed {
   width: 100%;
-  height: 70vh;
+  height: 600px;
   margin-top: clamp(10px, 1.5vw, 20px);
   border-radius: 10px;
   overflow: hidden;
@@ -355,6 +356,7 @@ img,
   margin-top: clamp(10px, 1.5vw, 20px);
   display: flex;
   justify-content: center;
+  min-height: 580px;
 }
 .InstagramEmbed .instagram-media,
 .InstagramEmbed iframe {
@@ -402,6 +404,19 @@ img,
 .SeeMore {
   text-align: right;
   margin-top: clamp(12px, 3vw, 24px);
+}
+#resume {
+  margin-top: clamp(16px, 3vw, 32px);
+  margin-bottom: 0;
+  padding: clamp(12px, 2vw, 24px) clamp(16px, 3vw, 32px);
+}
+.ResumeLink {
+  text-align: center;
+}
+.ResumeLink a {
+  color: #ffffff;
+  text-decoration: none;
+  font-size: clamp(2.2rem, 1.6rem + 4.4vw, 4.2rem);
 }
 .SeeMore a {
   color: #ffffff;
@@ -615,10 +630,6 @@ img,
   animation: none !important;
   bottom: -100% !important;
 }
-.ReducedMotionToggle:checked ~ .PageEnd .View {
-  animation: none !important;
-  bottom: -130% !important;
-}
 .ReducedMotionToggle:checked ~ .Menu,
 .ReducedMotionToggle:checked ~ .MenuBar .MenuLinks,
 .ReducedMotionToggle:checked ~ .MenuBar .ReducedMotionLabel {
@@ -814,29 +825,14 @@ a:hover {
 }
 .View {
   z-index: 99;
-  /* width: 100%; */
-  /* width: 100vw; */
   width: clamp(min(115vh, 150vw), 100vw, 200vw);
   aspect-ratio: 2240 / 1440;
   background-image: url(/assets/Bottom.png);
   background-repeat: no-repeat;
   background-size: 100% 100%;
-  position: fixed;
-  bottom: -130%;
-  right: 0;
-  animation: down-up linear;
-  animation-timeline: scroll();
-}
-@keyframes down-up {
-  0% {
-    bottom: -130%;
-  }
-  75% {
-    bottom: -130%;
-  }
-  100% {
-    bottom: 0%;
-  }
+  position: static;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 /* SIDEBAR ELEMENTS */
